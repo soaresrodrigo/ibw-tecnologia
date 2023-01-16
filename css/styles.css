@@ -11384,7 +11384,7 @@ p {
     transition: font-size 0.3s ease-in-out;
   }
   #mainNav .navbar-brand img {
-    height: 2rem;
+    height: 8rem;
     transition: height 0.3s ease-in-out;
   }
   #mainNav.navbar-shrink {
@@ -11411,7 +11411,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/img/intro-background.jpg");
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url("../assets/img/intro-background.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
