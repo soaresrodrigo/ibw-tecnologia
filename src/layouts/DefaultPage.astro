@@ -1,0 +1,15 @@
+---
+import Head from "@components/Head.astro";
+import type { Props } from "@components/Head.astro";
+import Footer from "@components/Footer.astro";
+
+const { title, description, image } = Astro.props as Props;
+---
+
+<html lang="pt-br">
+  <Head title={title} description={description} image={image} />
+  <body>
+    <slot />
+    <Footer/>
+  </body>
+</html>
