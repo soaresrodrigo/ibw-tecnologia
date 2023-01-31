@@ -1,133 +1,153 @@
 ---
 import Facebook from "@assets/icons/Facebook.astro";
 import Instagram from "@assets/icons/Instagram.astro";
-import Twitter from "@assets/icons/Twitter.astro";
+import Tiktok from "@assets/icons/Tiktok.astro";
+import Whatsapp from "@assets/icons/Whatsapp.astro";
 import Youtube from "@assets/icons/Youtube.astro";
 
 const title = import.meta.env.SITE_TITLE;
 const currentYear = new Date().getFullYear();
 ---
 
-<footer
-  class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
->
-  <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
-    <div class="sm:col-span-2">
-      <a
-        href="/"
-        aria-label="Go home"
-        title="Company"
-        class="inline-flex items-center"
-      >
-        <img alt="logo" src="/images/logo.png" width="100" />
-        <span
-          class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase"
-          >{title}</span
-        >
-      </a>
-      <div class="mt-6 lg:max-w-sm">
-        <p class="text-sm text-gray-800">
-          Empresa Especializada em Manutenção de Notebook e Computador.
-        </p>
-        <p class="mt-4 text-sm text-gray-800">
-          Soluções em Tecnologia para Empresas.
-        </p>
+<div class="footer-dark">
+  <footer>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3 mx-auto">
+          <img src="/images/logo.png" alt="logo" height="100" class="mx-auto d-block" />
+        </div>
       </div>
+      <div class="row">
+        <div class="col-md-6 item text">
+          <h3>{title}</h3>
+          <p>Empresa Especializada em Manutenção de Notebook e Computador.</p>
+          <p>Soluções em Tecnologia para Empresas.</p>
+        </div>
+        <div class="col-sm-6 col-md-3 item">
+          <h3>Contatos</h3>
+          <ul>
+            <li>
+              <a
+                href="mailto:contato@ibwtecnologia.com.br"
+                aria-label="Email"
+                title="Email">contato@ibwtecnologia.com.br</a
+              >
+            </li>
+            <li>
+              <a
+                href="tel:+5571987465932"
+                aria-label="Telefone"
+                title="Telefone"
+                >(71) 98746-5932</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-1 item">
+          <h3>Endereço</h3>
+          <ul>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.google.com/maps/search/Tv.%20Ant%C3%B4nio%20Fel%C3%ADcio%20P%C3%ADmentel%2C%2013A%20-%20Centro%2C%20Lauro%20de%20Freitas%20-%20BA%2C%2042700-000%2C%20Brasil/@-12.8945,-38.3225,17z?hl=pt-BR"
+                >Tv. Antônio Felício Pímentel, 13A - Centro, Lauro de Freitas - BA,
+                42700-000, Brasil</a>
+
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-2 item text">
+          <h3>Horários</h3>
+            <p>seg-sex: 9hrs - 17hrs</p>
+            <p>sab: 8hrs - 12hrs</p>
+        </div>
+
+        <div class="col social">
+          <a href="#"><Instagram /></a>
+          <a href="#"><Facebook /></a>
+          <a href="#"><Youtube /></a>
+          <a href="#"><Whatsapp /></a>
+          <a href="#"><Tiktok /></a>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">{title} © {currentYear}</p>
     </div>
-    <div class="space-y-2 text-sm">
-      <p class="text-base font-bold tracking-wide text-gray-900">Contatos</p>
-      <div class="flex">
-        <p class="mr-1 text-gray-800">Telefone:</p>
-        <a
-          href="tel:+5571987465932"
-          aria-label="Telefone"
-          title="Telefone"
-          class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
-          >(71) 98746-5932</a
-        >
-      </div>
-      <div class="flex">
-        <p class="mr-1 text-gray-800">Email:</p>
-        <a
-          href="mailto:info@lorem.mail"
-          aria-label="Email"
-          title="Email"
-          class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
-          >info@lorem.mail</a
-        >
-      </div>
-      <div class="flex">
-        <p class="mr-1 text-gray-800">Endereço:</p>
-        <a
-          href="https://www.google.com/maps/search/Tv.%20Ant%C3%B4nio%20Fel%C3%ADcio%20P%C3%ADmentel%2C%2013A%20-%20Centro%2C%20Lauro%20de%20Freitas%20-%20BA%2C%2042700-000%2C%20Brasil/@-12.8945,-38.3225,17z?hl=pt-BR"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Endereço"
-          title="Endereço"
-          class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
-        >
-          Lauro de Freitas, BA - Brasil
-        </a>
-      </div>
-    </div>
-    <div>
-      <span class="text-base font-bold tracking-wide text-gray-900"
-        >Redes Sociais</span
-      >
-      <div class="flex items-center mt-1 space-x-3">
-        <a
-          href="/"
-          class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
-        >
-          <Twitter />
-        </a>
-        <a
-          href="/"
-          class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
-        >
-          <Instagram />
-        </a>
-        <a
-          href="/"
-          class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
-        >
-          <Facebook />
-        </a>
-        <a
-          href="/"
-          class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
-        >
-          <Youtube />
-        </a>
-      </div>
-      <p class="mt-4 text-sm text-gray-500">
-        Acompanhe mais novidades também pelas nossas redes sociais.
-      </p>
-    </div>
-  </div>
-  <div
-    class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row"
-  >
-    <p class="text-sm text-gray-600">
-      © Copyright - {currentYear} | <span class="font-bold">{title}</span>. Todos os direitos reservados.
-    </p>
-    <ul
-      class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row"
-    >
-      <li>
-        <a
-          href="/"
-          class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-          >F.A.Q</a
-        >
-      </li>
-      <li>
-        <a
-          href="/"
-          class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-          >Política de Privacidade</a
-        >
-      </li>
-    </ul>
-  </div>
-</footer>
+  </footer>
+</div>
+
+<style lang="scss">
+  .footer-dark {
+    padding: 50px 0;
+    color: #f0f9ff;
+    background-color: #282d32;
+    h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      line-height: 1.6;
+      font-size: 14px;
+      margin-bottom: 0;
+      a {
+        color: inherit;
+        text-decoration: none;
+        opacity: 0.6;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .social {
+    max-width: 420px;
+    gap: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    a {
+      cursor: pointer;
+      color: #888;
+
+      &:hover {
+        color: #999;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .footer-dark .item {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
+
+  .footer-dark .item.text {
+    margin-bottom: 36px;
+  }
+
+  @media (max-width: 767px) {
+    .footer-dark .item.text {
+      margin-bottom: 0;
+    }
+  }
+
+  .footer-dark .item.text p {
+    opacity: 0.6;
+    margin-bottom: 0;
+  }
+
+  .footer-dark .copyright {
+    text-align: center;
+    padding-top: 24px;
+    opacity: 0.3;
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+</style>
