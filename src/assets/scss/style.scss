@@ -1,0 +1,27 @@
+.bg-ibw {
+    background-color: #4C5688;
+}
+
+.section-config {
+    display: flex;
+    padding: 5em;
+    gap: 5em;
+}
+
+.title-config {
+    text-align: center;
+    margin-bottom: 5em;
+
+    h1 {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    p {
+        opacity: .8;
+    }
+}
+
+.shadow-light {
+    box-shadow: 10px 10px 19px -7px rgba(0, 0, 0, 0.39);
+}

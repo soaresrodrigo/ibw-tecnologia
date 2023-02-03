@@ -1,6 +1,6 @@
 ---
 import Menu from "@assets/icons/Menu.astro";
-
+import CTAButton from "./CTAButton.astro";
 ---
 
 <div>
@@ -18,7 +18,7 @@ import Menu from "@assets/icons/Menu.astro";
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <Menu/>
+        <Menu />
         <i class="fas fa-bars ms-1"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -35,15 +35,13 @@ import Menu from "@assets/icons/Menu.astro";
             <a class="nav-link" href="#contact">Contato</a>
           </li>
         </ul>
+        <CTAButton />
       </div>
     </div>
   </nav>
 </div>
 
 <style lang="scss">
-  body {
-    background-color: blueviolet;
-  }
   $color_1: red;
   $color_2: rgba(0, 0, 0, 0.9);
   $color_3: rgba(0, 0, 0, 0.55);
@@ -58,14 +56,15 @@ import Menu from "@assets/icons/Menu.astro";
   $border-color_2: rgba(255, 255, 255, 0.1);
 
   .navbar {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    background-color: #282d32;
+    background-color: rgba(40, 45, 50, 0.5);
+    backdrop-filter: blur(15px);
+
     > .container {
       display: flex;
       flex-wrap: inherit;

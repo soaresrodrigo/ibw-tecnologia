@@ -1,0 +1,44 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+  buttonCTA?: string;
+  buttonLink?: string;
+}
+
+const { icon, title, description, buttonCTA, buttonLink } = Astro.props;
+---
+
+<div class="card shadow-light">
+  <img src={icon} alt={title} width="100px"/>
+  <h1>{title}</h1>
+  <p>{description}</p>
+
+  {buttonCTA && buttonLink ? <a class="btn btn-success" href={buttonLink}> {buttonCTA}</a> : null}
+</div>
+
+<style lang="scss">
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    gap: 20px;
+    padding: 10px;
+    background-color: #282d32;
+    color: white;
+    max-height: 500px;
+    height: 500px;
+    text-align: center;
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 1.3em;
+    }
+
+    p {
+        color: #999;
+    }
+  }
+</style>
