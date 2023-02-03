@@ -12,8 +12,9 @@
   },
   "dependencies": {
     "@astrojs/image": "^0.14.0",
+    "@astrojs/netlify": "^2.1.1",
     "@types/bootstrap": "^5.2.6",
-    "astro": "^2.0.5",
+    "astro": "^2.0.6",
     "bootstrap": "^5.2.3"
   },
   "devDependencies": {
