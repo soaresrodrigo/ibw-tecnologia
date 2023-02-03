@@ -10,7 +10,7 @@ interface Props {
 const { icon, title, description, buttonCTA, buttonLink } = Astro.props;
 ---
 
-<div class="card shadow-light">
+<div class="card shadow-light bg-ibw-dark">
   <img src={icon} alt={title} width="100px"/>
   <h1>{title}</h1>
   <p>{description}</p>
@@ -26,7 +26,6 @@ const { icon, title, description, buttonCTA, buttonLink } = Astro.props;
     border-radius: 5px;
     gap: 20px;
     padding: 10px;
-    background-color: #282d32;
     color: white;
     max-height: 500px;
     height: 500px;
