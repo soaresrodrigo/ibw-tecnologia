@@ -5,6 +5,7 @@ import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
 import bootstrap from "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js?url";
 
+import "@assets/scss/style.scss";
 
 const { title, description, image } = Astro.props as Props;
 ---
@@ -12,9 +13,9 @@ const { title, description, image } = Astro.props as Props;
 <html lang="pt-br">
   <Head title={title} description={description} image={image} />
   <body>
-    <Navbar/>
+    <Navbar />
     <slot />
-    <Footer/>
+    <Footer />
+    <script src={bootstrap}></script>
   </body>
-  <script src={bootstrap}></script>
 </html>

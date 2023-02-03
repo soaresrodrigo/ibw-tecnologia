@@ -1,41 +1,293 @@
 ---
+import Header from "@components/Header.astro";
 import DefaultPage from "@layouts/DefaultPage.astro";
+import Card from "@components/Card.astro";
+import CTAButton from "@components/CTAButton.astro";
+
+interface Testimonial {
+  photoUrl: string;
+  author: string;
+  description: string;
+}
+
+const articles: Testimonial[] = [
+  {
+    photoUrl: "https://thispersondoesnotexist.com/image",
+    author: "Rodrigo Soares",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl: "https://thispersondoesnotexist.com/image",
+    author: "Laís Santana",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl: "https://thispersondoesnotexist.com/image",
+    author: "Danilo Ferreira",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl: "https://thispersondoesnotexist.com/image",
+    author: "Jessica Garcia",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl: "https://thispersondoesnotexist.com/image",
+    author: "Vinicius Silva",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+];
 ---
 
 <DefaultPage title="Multi tecnologia" description="">
-  Minha página inicial
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>\sdczsdvdzszvdxc
-  <br>\sdczsdvdzszvdxc
-  <br>\sdczsdvdzszvdxc
-  <br>\sdczsdvdzszvdxc
-  <br>\sdczsdvdzszvdxc
-  <br>\sdczsdvdzszvdxc
-  <br>\sdczsdvdzszvdxc
-  <br>\sdczsdvdzszvdxc
-  <br>\sdczsdvdzszvdxc
-  <br>\sdczsdvdzszvdxc  
-  <br>
-  <br>
-  <br>
-  <br>
+  <Header />
+  <!-- SERVICES -->
+  <section class="services section-config">
+    <div class="container">
+      <div class="title-config">
+        <h1>Serviços</h1>
+        <p>Clique em <mark>Saiba mais</mark> para obter mais detalhes.</p>
+      </div>
+
+      <div class="row m-2">
+        <div class="col-md-4">
+          <Card
+            icon="/icons/maintenance.svg"
+            title="Manutenção"
+            description="Somos especialistas em manutenção de notebooks e computadores. Temos um laboratório completo para reparação do seu equipamento."
+            buttonCTA="Saiba mais"
+            buttonLink={"/contato"}
+          />
+        </div>
+        <div class="col-md-4">
+          <Card
+            icon="/icons/business.svg"
+            title="Soluções empresariais"
+            description="Oferecemos soluções de T.I para empresas. Dentre as soluções estão: Redes, CFTV, Alarmes, Interfonia e Controle de Acesso."
+            buttonCTA="Saiba mais"
+            buttonLink={"/contato"}
+          />
+        </div>
+        <div class="col-md-4">
+          <Card
+            icon="/icons/sale.svg"
+            title="Vendas"
+            description="Compre computadores e itens de informática na IBW. Pc Gamers, memórias, SSD, mouses, teclados e muito mais."
+            buttonCTA="Saiba mais"
+            buttonLink={"/contato"}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUANTITY SERVICES -->
+  <section class="quantity section-config bg-dark">
+    <div class="container">
+      <div class="row text-secondary">
+        <div class="col-3 m-1 mx-auto shadow-light border-top border-primary">
+          <h2>300+</h2>
+          <p class="text-primary">Clientes atendidos</p>
+        </div>
+        <div class="col-3 m-1 mx-auto shadow-light border-top border-warning">
+          <h2>200+</h2>
+          <p class="text-warning">Avaliações</p>
+        </div>
+        <div class="col-3 m-1 mx-auto shadow-light border-top border-danger">
+          <h2>100+</h2>
+          <p class="text-danger">Produtos à venda</p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-3 mx-auto">
+
+          <CTAButton/>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section-config bg-ibw">
+    <div class="container">
+      <div class="testimonial js-tabcontent">
+        <img class="quotation" src="/icons/quotation.svg" alt="quotation" />
+        {
+          articles.map((item) => {
+            return (
+              <article>
+                <p>{item.description}</p>
+                <div class="author">{item.author}</div>
+              </article>
+            );
+          })
+        }
+
+        <ul class="avatars js-tabmenu">
+          {
+            articles.map((item) => {
+              return (
+                <li>
+                  <img src={item.photoUrl} alt={item.author} />
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- COMPANY BRANDS -->
+  <section class="brands section-config bg-white">
+    <ul class="container-fluid">
+      <li><img src="/images/brands/avell.png" src="avell" width="100" /></li>
+      <li><img src="/images/brands/vaio.png" src="vaio" width="100" /></li>
+      <li>
+        <img src="/images/brands/lenovo.png" src="lenovo" width="150" />
+      </li>
+      <li>
+        <img src="/images/brands/samsung.png" src="samsung" width="100" />
+      </li>
+      <li><img src="/images/brands/lg.png" src="lg" width="100" /></li>
+      <li><img src="/images/brands/dell.png" src="dell" width="70" /></li>
+      <li><img src="/images/brands/apple.png" src="apple" width="100" /></li>
+      <li><img src="/images/brands/asus.png" src="asus" width="100" /></li>
+      <li><img src="/images/brands/hp.png" src="hp" width="100" /></li>
+      <li>
+        <img src="/images/brands/positivo.png" src="positivo" width="100" />
+      </li>
+    </ul>
+  </section>
 </DefaultPage>
+
+<style lang="scss">
+  .services {
+    background-color: #eeeef2;
+  }
+
+  .brands {
+    ul {
+      display: inline-flex;
+      align-items: center;
+      gap: 5%;
+      justify-items: center;
+      overflow: hidden;
+
+      li {
+        list-style: none;
+        img {
+          filter: grayscale(1);
+        }
+      }
+    }
+  }
+
+  .js-tabmenu li {
+    transform: scale(1);
+    transition: 0.2s;
+    opacity: 0.5;
+  }
+
+  .js-tabmenu li.active {
+    opacity: 1;
+    transform: scale(1.3);
+    img {
+      box-shadow: 10px 10px 19px -7px rgba(0, 0, 0, 0.39);
+    }
+  }
+
+  .js-tabcontent article {
+    display: none;
+  }
+
+  .js-tabcontent article.active {
+    display: block;
+    animation: show 0.5s forwards;
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      transform: translate3d(-30px, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .testimonial {
+    margin-top: 3em;
+    gap: 3em;
+    font-style: oblique;
+    font-size: 1.3em;
+    color: white;
+
+    .quotation {
+      display: block;
+      margin: 0 auto 4em auto;
+      width: 100px;
+      opacity: 0.1;
+    }
+
+    article {
+      width: 60%;
+      margin: 0 auto;
+      padding-bottom: 5%;
+      p {
+        text-align: justify;
+      }
+
+      .author {
+        font-weight: bold;
+        text-align: right !important;
+      }
+    }
+
+    .avatars {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      padding: 0;
+      list-style: none;
+
+      img {
+        width: 60px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+</style>
+
+<script>
+  const tabMenu = document.querySelectorAll(".js-tabmenu li");
+  const tabContent = document.querySelectorAll(".js-tabcontent article");
+
+  const classActive = "active";
+  tabContent[0].classList.add(classActive);
+  tabMenu[0].classList.add(classActive);
+
+  if (tabMenu.length && tabContent.length) {
+    function activeTab(index: number) {
+      tabContent.forEach((section, index) => {
+        section.classList.remove(classActive);
+        tabMenu[index].classList.remove(classActive);
+      });
+      tabContent[index].classList.add(classActive);
+      tabMenu[index].classList.add(classActive);
+    }
+
+    tabMenu.forEach((itemMenu, index) => {
+      itemMenu.addEventListener("click", () => {
+        activeTab(index);
+      });
+    });
+  }
+</script>
