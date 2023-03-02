@@ -1,0 +1,172 @@
+---
+import Card from "@components/Card.astro";
+import DefaultPage from "@layouts/DefaultPage.astro";
+import CTAButton from "@components/CTAButton.astro";
+import Testimonial from "@components/Testimonial.astro";
+import type { ITestimonial } from "@components/Testimonial.astro";
+
+const articles: ITestimonial[] = [
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Rodrigo Soares",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Laís Santana",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Danilo Ferreira",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Jessica Garcia",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Vinicius Silva",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+];
+---
+
+<DefaultPage title="Soluções Empresariais" description="">
+  <header>
+    <div class="text-config">
+      <h1>Soluções empresariais</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus autem
+        sapiente possimus nihil officia labore consequuntur provident quae cum!
+        Provident optio a iste commodi animi repudiandae minus! Ea, illo in.
+      </p>
+    </div>
+  </header>
+
+  <!-- Todos os artigos; -->
+  <section class="container space">
+      <!-- Rede -->
+      <article class="row align-items-center justify-content-around">
+        <figure class="order-sm-1 col-4">
+          <img src="/images/rede.svg" height="400" alt="" />
+        </figure>
+
+        <div class="order-sm-2 col-4">
+          <h1>Rede</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+            libero? Et officia vitae facilis veritatis soluta doloremque aliquam
+            nemo. In doloremque esse minima! Magnam modi sit ipsum corporis
+            facere libero?
+          </p>
+        </div>
+      </article>
+
+      <!-- CFTV -->
+      <article class="row align-items-center justify-content-around">
+        <figure class="order-sm-2 col-4">
+          <img src="/images/vigilancia.svg" height="400" alt="" />
+        </figure>
+
+        <div class="order-sm-1 col-4">
+          <h1>CFTV</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+            libero? Et officia vitae facilis veritatis soluta doloremque aliquam
+            nemo. In doloremque esse minima! Magnam modi sit ipsum corporis
+            facere libero?
+          </p>
+        </div>
+      </article>
+
+      <!-- CFTV -->
+      <article class="row align-items-center justify-content-around">
+        <figure class="order-sm-1 col-4">
+          <img src="/images/alarme.svg" height="400" alt="" />
+        </figure>
+
+        <div class="order-sm-2 col-4">
+          <h1>Alarme</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+            libero? Et officia vitae facilis veritatis soluta doloremque aliquam
+            nemo. In doloremque esse minima! Magnam modi sit ipsum corporis
+            facere libero?
+          </p>
+        </div>
+      </article>
+
+      <!-- Interfonia -->
+      <article class="row align-items-center justify-content-around">
+        <figure class="order-sm-2 col-4">
+          <img src="/images/interfone.svg" width="400" alt="" />
+        </figure>
+
+        <div class="order-sm-1 col-4">
+          <h1>Interfonia</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+            libero? Et officia vitae facilis veritatis soluta doloremque aliquam
+            nemo. In doloremque esse minima! Magnam modi sit ipsum corporis
+            facere libero?
+          </p>
+        </div>
+      </article>
+
+      <!-- Controle de acesso -->
+      <article class="row align-items-center justify-content-around">
+        <figure class="order-sm-1 col-4">
+          <img src="/images/acesso.svg" width="400" height="400" alt="" />
+        </figure>
+
+        <div class="order-sm-2 col-4">
+          <h1>Controle de acesso</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+            libero? Et officia vitae facilis veritatis soluta doloremque aliquam
+            nemo. In doloremque esse minima! Magnam modi sit ipsum corporis
+            facere libero?
+          </p>
+        </div>
+      </article>
+  </section>
+
+  <!--  TESTIMONIALS -->
+  <!-- <section class="section-config bg-ibw">
+    <div class="container">
+      <Testimonial testimonials={articles} />
+    </div>
+  </section> -->
+</DefaultPage>
+
+<style lang="scss">
+  header {
+    padding: 10%;
+    text-align: center;
+    background-color: #272d32;
+    color: white;
+
+    .text-config {
+      width: 50%;
+      margin: 0 auto;
+      h1 {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 3em;
+      }
+    }
+  }
+</style>

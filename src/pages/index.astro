@@ -3,40 +3,41 @@ import Header from "@components/Header.astro";
 import DefaultPage from "@layouts/DefaultPage.astro";
 import Card from "@components/Card.astro";
 import CTAButton from "@components/CTAButton.astro";
+import Testimonial from "@components/Testimonial.astro";
+import type { ITestimonial } from "@components/Testimonial.astro";
 
-interface Testimonial {
-  photoUrl: string;
-  author: string;
-  description: string;
-}
-
-const articles: Testimonial[] = [
+const articles: ITestimonial[] = [
   {
-    photoUrl: "https://thispersondoesnotexist.com/image",
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
     author: "Rodrigo Soares",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
   },
   {
-    photoUrl: "https://thispersondoesnotexist.com/image",
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
     author: "Laís Santana",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
   },
   {
-    photoUrl: "https://thispersondoesnotexist.com/image",
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
     author: "Danilo Ferreira",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
   },
   {
-    photoUrl: "https://thispersondoesnotexist.com/image",
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
     author: "Jessica Garcia",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
   },
   {
-    photoUrl: "https://thispersondoesnotexist.com/image",
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
     author: "Vinicius Silva",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
@@ -61,7 +62,7 @@ const articles: Testimonial[] = [
             title="Manutenção"
             description="Somos especialistas em manutenção de notebooks e computadores. Temos um laboratório completo para reparação do seu equipamento."
             buttonCTA="Saiba mais"
-            buttonLink={"/contato"}
+            buttonLink={"/servicos/manutencao"}
           />
         </div>
         <div class="col-md-4">
@@ -70,7 +71,7 @@ const articles: Testimonial[] = [
             title="Soluções empresariais"
             description="Oferecemos soluções de T.I para empresas. Dentre as soluções estão: Redes, CFTV, Alarmes, Interfonia e Controle de Acesso."
             buttonCTA="Saiba mais"
-            buttonLink={"/contato"}
+            buttonLink={"/servicos/solucoes-empresariais"}
           />
         </div>
         <div class="col-md-4">
@@ -90,25 +91,29 @@ const articles: Testimonial[] = [
   <section class="quantity section-config bg-dark">
     <div class="container">
       <div class="row text-secondary">
-        <div class="col-3 m-1 mx-auto shadow-light border-top border-primary">
+        <div
+          class="col-3 m-1 p-3 mx-auto shadow-light border-top border-primary"
+        >
           <h2>300+</h2>
           <p class="text-primary">Clientes atendidos</p>
         </div>
-        <div class="col-3 m-1 mx-auto shadow-light border-top border-warning">
+        <div
+          class="col-3 m-1 p-3 mx-auto shadow-light border-top border-warning"
+        >
           <h2>200+</h2>
           <p class="text-warning">Avaliações</p>
         </div>
-        <div class="col-3 m-1 mx-auto shadow-light border-top border-danger">
+        <div
+          class="col-3 m-1 p-3 mx-auto shadow-light border-top border-danger"
+        >
           <h2>100+</h2>
           <p class="text-danger">Produtos à venda</p>
         </div>
       </div>
       <div class="row mt-5">
         <div class="col-3 mx-auto">
-
-          <CTAButton/>
+          <CTAButton />
         </div>
-
       </div>
     </div>
   </section>
@@ -116,31 +121,7 @@ const articles: Testimonial[] = [
   <!-- TESTIMONIALS -->
   <section class="section-config bg-ibw">
     <div class="container">
-      <div class="testimonial js-tabcontent">
-        <img class="quotation" src="/icons/quotation.svg" alt="quotation" />
-        {
-          articles.map((item) => {
-            return (
-              <article>
-                <p>{item.description}</p>
-                <div class="author">{item.author}</div>
-              </article>
-            );
-          })
-        }
-
-        <ul class="avatars js-tabmenu">
-          {
-            articles.map((item) => {
-              return (
-                <li>
-                  <img src={item.photoUrl} alt={item.author} />
-                </li>
-              );
-            })
-          }
-        </ul>
-      </div>
+      <Testimonial testimonials={articles} />
     </div>
   </section>
   <!-- COMPANY BRANDS -->
@@ -187,107 +168,4 @@ const articles: Testimonial[] = [
       }
     }
   }
-
-  .js-tabmenu li {
-    transform: scale(1);
-    transition: 0.2s;
-    opacity: 0.5;
-  }
-
-  .js-tabmenu li.active {
-    opacity: 1;
-    transform: scale(1.3);
-    img {
-      box-shadow: 10px 10px 19px -7px rgba(0, 0, 0, 0.39);
-    }
-  }
-
-  .js-tabcontent article {
-    display: none;
-  }
-
-  .js-tabcontent article.active {
-    display: block;
-    animation: show 0.5s forwards;
-  }
-
-  @keyframes show {
-    from {
-      opacity: 0;
-      transform: translate3d(-30px, 0, 0);
-    }
-    to {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  .testimonial {
-    margin-top: 3em;
-    gap: 3em;
-    font-style: oblique;
-    font-size: 1.3em;
-    color: white;
-
-    .quotation {
-      display: block;
-      margin: 0 auto 4em auto;
-      width: 100px;
-      opacity: 0.1;
-    }
-
-    article {
-      width: 60%;
-      margin: 0 auto;
-      padding-bottom: 5%;
-      p {
-        text-align: justify;
-      }
-
-      .author {
-        font-weight: bold;
-        text-align: right !important;
-      }
-    }
-
-    .avatars {
-      display: flex;
-      justify-content: center;
-      gap: 100px;
-      padding: 0;
-      list-style: none;
-
-      img {
-        width: 60px;
-        border-radius: 50%;
-        cursor: pointer;
-      }
-    }
-  }
 </style>
-
-<script>
-  const tabMenu = document.querySelectorAll(".js-tabmenu li");
-  const tabContent = document.querySelectorAll(".js-tabcontent article");
-
-  const classActive = "active";
-  tabContent[0].classList.add(classActive);
-  tabMenu[0].classList.add(classActive);
-
-  if (tabMenu.length && tabContent.length) {
-    function activeTab(index: number) {
-      tabContent.forEach((section, index) => {
-        section.classList.remove(classActive);
-        tabMenu[index].classList.remove(classActive);
-      });
-      tabContent[index].classList.add(classActive);
-      tabMenu[index].classList.add(classActive);
-    }
-
-    tabMenu.forEach((itemMenu, index) => {
-      itemMenu.addEventListener("click", () => {
-        activeTab(index);
-      });
-    });
-  }
-</script>
