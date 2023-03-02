@@ -57,7 +57,7 @@ const articles: ITestimonial[] = [
   </header>
 
   <!-- Vídeo falando sobre o serviço de manutenção; -->
-  <section class="bg-teste">
+  <section class="bg-blue-dark">
     <div class="video-presentation text-white">
       <div class="row">
         <div class="col-6">
@@ -90,6 +90,7 @@ const articles: ITestimonial[] = [
 
   <!-- Seção dos cards -->
   <section class="container bg-light p-5">
+    <h2 class="text-center pb-5 text-blue-dark">Todos os nossos serviços de manutenção</h2>
     <div class="row mt-2">
       <div class="col-md-4">
         <Card
@@ -141,14 +142,19 @@ const articles: ITestimonial[] = [
   <!--  TESTIMONIALS -->
   <section class="section-config bg-teste2">
     <div class="container">
+      <h2 class="text-left pb-5 text-light">» Confira abaixo o que os clientes falam sobre a manuntenção...</h2>
       <Testimonial testimonials={articles} />
     </div>
   </section>
 </DefaultPage>
 
 <style lang="scss">
-  .bg-teste {
+  .bg-blue-dark {
     background-color: #30336b;
+  }
+
+  .text-blue-dark {
+     color: #30336b;
   }
 
   .bg-teste2 {
