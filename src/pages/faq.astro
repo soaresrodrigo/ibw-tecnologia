@@ -1,0 +1,259 @@
+---
+import Card from "@components/Card.astro";
+import DefaultPage from "@layouts/DefaultPage.astro";
+import CTAButton from "@components/CTAButton.astro";
+import Testimonial from "@components/Testimonial.astro";
+import type { ITestimonial } from "@components/Testimonial.astro";
+
+const articles: ITestimonial[] = [
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Rodrigo Soares",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Laís Santana",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Danilo Ferreira",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Jessica Garcia",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Vinicius Silva",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+];
+---
+
+<DefaultPage title="FAQ" description="">
+  <header>
+    <div class="text-config">
+      <h1>FAQ</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus autem
+        sapiente possimus nihil officia labore consequuntur provident quae cum!
+        Provident optio a iste commodi animi repudiandae minus! Ea, illo in.
+      </p>
+    </div>
+  </header>
+
+  <!-- Todos as perguntas -->
+  <section class="container faq js-scroll p-5" id="faq">
+    <dl class="faq-lista js-accordion">
+      <dt>Vocês vendem computadores de marca ou personalizados?</dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
+        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
+        magni?
+      </dd>
+      <dt>Qual é a política de garantia dos seus produtos?</dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
+        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
+        magni?
+      </dd>
+      <dt>
+        Vocês realizam reparos em computadores e notebooks de outras marcas?
+      </dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
+        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
+        magni?.
+      </dd>
+      <dt>Quais são os tipos de acessórios que vocês vendem?</dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
+        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
+        magni?.
+      </dd>
+      <dt>Vocês oferecem soluções de segurança cibernética para empresas?</dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
+        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
+        magni?.
+      </dd>
+      <dt>
+        Quais são as opções de pagamento disponíveis para os produtos e
+        serviços?
+      </dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
+        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
+        magni?.
+      </dd>
+      <dt>Quanto tempo leva para consertar um computador ou notebook?</dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
+        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
+        magni?.
+      </dd>
+      <dt>Vocês oferecem serviços de backup e recuperação de dados?</dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
+        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
+        magni?.
+      </dd>
+      <dt>
+        Como faço para solicitar uma cotação para uma solução personalizada para
+        a minha empresa?
+      </dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
+        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
+        magni?.
+      </dd>
+      <dt>
+        Vocês oferecem treinamento e suporte técnico para as soluções vendidas?
+      </dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
+        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
+        magni?.
+      </dd>
+    </dl>
+  </section>
+
+  <!--  TESTIMONIALS -->
+  <section class="section-config bg-ibw">
+    <div class="container">
+      <Testimonial testimonials={articles} />
+    </div>
+  </section>
+</DefaultPage>
+
+<style lang="scss">
+  header {
+    padding: 10%;
+    text-align: center;
+    background-color: #272d32;
+    color: white;
+
+    .text-config {
+      width: 50%;
+      margin: 0 auto;
+      h1 {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 3em;
+      }
+    }
+  }
+
+  .faq-lista {
+    grid-column: 2 / 4;
+  }
+
+  .faq-lista dt {
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: #272d32;
+  }
+
+  .faq-lista dt::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+    background: #4c5688;
+  }
+
+  .faq-lista dd {
+    font-family: Helvetica, Arial;
+    margin-bottom: 0.5rem;
+    margin-left: 30px;
+  }
+
+  .js .js-accordion dd {
+    display: none;
+  }
+
+  .js-accordion dt {
+    cursor: pointer;
+  }
+
+  .js-accordion dt::after {
+    content: "⤵";
+    margin-left: 10px;
+  }
+
+  .js-accordion dt.ativo::after {
+    content: "⤴";
+  }
+
+  .js-accordion dd.ativo {
+    display: block;
+    animation: slideDown 0.5s forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      max-height: 0;
+    }
+    to {
+      max-height: 100px;
+      opacity: 1;
+    }
+  }
+
+  .js .js-scroll {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+    transition: 0.3s;
+  }
+
+  .js .js-scroll.ativo {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+</style>
+
+<script>
+  const accordionList = document.querySelectorAll(".js-accordion dt");
+
+  const classActive = "ativo";
+  if (accordionList.length) {
+    accordionList[0].classList.add(classActive);
+    accordionList[0].nextElementSibling?.classList.add(classActive);
+
+    function activeAccordion(e: any) {
+      e.classList.toggle(classActive);
+      e.nextElementSibling.classList.toggle(classActive);
+    }
+
+    accordionList.forEach((item) => {
+      item.addEventListener("click", activeAccordion);
+    });
+  }
+</script>
