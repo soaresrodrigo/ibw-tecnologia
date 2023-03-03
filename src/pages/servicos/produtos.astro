@@ -1,0 +1,230 @@
+---
+import Card from "@components/Card.astro";
+import DefaultPage from "@layouts/DefaultPage.astro";
+import CTAButton from "@components/CTAButton.astro";
+import Testimonial from "@components/Testimonial.astro";
+import type { ITestimonial } from "@components/Testimonial.astro";
+
+const articles: ITestimonial[] = [
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Rodrigo Soares",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Laís Santana",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Danilo Ferreira",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Jessica Garcia",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+  {
+    photoUrl:
+      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
+    author: "Vinicius Silva",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
+  },
+];
+---
+
+<DefaultPage title="Soluções Empresariais" description="">
+  <header>
+    <div class="text-config">
+      <h1>Nossos produtos</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus autem
+        sapiente possimus nihil officia labore consequuntur provident quae cum!
+        Provident optio a iste commodi animi repudiandae minus! Ea, illo in.
+      </p>
+    </div>
+  </header>
+
+  <!-- Todos os artigos; -->
+  <section class="container space">
+    <!-- Computador -->
+    <article class="row align-items-center justify-content-around">
+      <figure class="order-sm-1 col-4">
+        <img
+          src="/images/products/computador.webp"
+          height="400"
+          alt="Computador"
+        />
+      </figure>
+
+      <div class="order-sm-2 col-4">
+        <h1>Computador</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+          libero? Et officia vitae facilis veritatis soluta doloremque aliquam
+          nemo. In doloremque esse minima! Magnam modi sit ipsum corporis facere
+          libero?
+        </p>
+        <p class="pt-3 pb-3">
+          <span class="border border-muted p-2 text-muted"
+            >Mais de 200 Vendas</span
+          >
+        </p>
+        <div class="d-block">
+          <CTAButton title={"Comprar"} />
+        </div>
+      </div>
+    </article>
+
+    <!-- Memória -->
+    <article class="row align-items-center justify-content-around">
+      <figure class="order-sm-2 col-4">
+        <img src="/images/products/memoria.webp" height="400" alt="" />
+      </figure>
+
+      <div class="order-sm-1 col-4">
+        <h1>Memória</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+          libero? Et officia vitae facilis veritatis soluta doloremque aliquam
+          nemo. In doloremque esse minima! Magnam modi sit ipsum corporis facere
+          libero?
+        </p>
+        <p class="pt-3 pb-3">
+          <span class="border border-muted p-2 text-muted"
+            >Mais de 200 Vendas</span
+          >
+        </p>
+        <div class="d-block">
+          <CTAButton title={"Comprar"} />
+        </div>
+      </div>
+    </article>
+
+    <!-- SSD -->
+    <article class="row align-items-center justify-content-around">
+      <figure class="order-sm-1 col-4">
+        <img src="/images/products/ssd.webp" height="400" alt="" />
+      </figure>
+
+      <div class="order-sm-2 col-4">
+        <h1>SSD</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+          libero? Et officia vitae facilis veritatis soluta doloremque aliquam
+          nemo. In doloremque esse minima! Magnam modi sit ipsum corporis facere
+          libero?
+        </p>
+        <p class="pt-3 pb-3">
+          <span class="border border-muted p-2 text-muted"
+            >Mais de 200 Vendas</span
+          >
+        </p>
+        <div class="d-block">
+          <CTAButton title={"Comprar"} />
+        </div>
+      </div>
+    </article>
+
+    <!-- Mouse -->
+    <article class="row align-items-center justify-content-around">
+      <figure class="order-sm-2 col-4">
+        <img src="/images/products/mouse.webp" width="400" alt="" />
+      </figure>
+
+      <div class="order-sm-1 col-4">
+        <h1>Mouse</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+          libero? Et officia vitae facilis veritatis soluta doloremque aliquam
+          nemo. In doloremque esse minima! Magnam modi sit ipsum corporis facere
+          libero?
+        </p>
+        <p class="pt-3 pb-3">
+          <span class="border border-muted p-2 text-muted"
+            >Mais de 200 Vendas</span
+          >
+        </p>
+        <div class="d-block">
+          <CTAButton title={"Comprar"} />
+        </div>
+      </div>
+    </article>
+
+    <!-- Teclado -->
+    <article class="row align-items-center justify-content-around">
+      <figure class="order-sm-1 col-4">
+        <img src="/images/products/teclado.webp" width="400" height="400" alt="" />
+      </figure>
+
+      <div class="order-sm-2 col-4">
+        <h1>Teclado</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+          libero? Et officia vitae facilis veritatis soluta doloremque aliquam
+          nemo. In doloremque esse minima! Magnam modi sit ipsum corporis facere
+          libero?
+        </p>
+        <p class="pt-3 pb-3">
+          <span class="border border-muted p-2 text-muted"
+            >Mais de 200 Vendas</span
+          >
+        </p>
+        <div class="d-block">
+          <CTAButton title={"Comprar"} />
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- QUANTITY SERVICES -->
+  <section class="section-config bg-ibw">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mb-5">
+          <h1 class="text-white text-center">Temos mais produtos à venda, venha conferir!</h1>
+        </div>
+        <div class="col-4 mx-auto">
+          <CTAButton title={"Confira mais produtos"} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  TESTIMONIALS -->
+  <!-- <section class="section-config bg-ibw">
+    <div class="container">
+      <Testimonial testimonials={articles} />
+    </div>
+  </section> -->
+</DefaultPage>
+
+<style lang="scss">
+  header {
+    padding: 10%;
+    text-align: center;
+    background-color: #272d32;
+    color: white;
+
+    .text-config {
+      width: 50%;
+      margin: 0 auto;
+      h1 {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 3em;
+      }
+    }
+  }
+</style>

@@ -1,10 +1,16 @@
 ---
 import Whatsapp from "@assets/icons/Whatsapp.astro";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Solicitar serviço" } = Astro.props;
 ---
 
 <a class="cta btn btn-success text-uppercase p-2" href="#services">
     <Whatsapp />
-    <span>Solicitar serviço</span>
+    <span>{title}</span>
 </a>
 
 <style>
