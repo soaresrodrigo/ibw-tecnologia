@@ -3,6 +3,21 @@
     border-radius: 3px;
 }
 
+iframe {
+  border: 2px solid #eeeef2;
+  padding: 0;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+mark {
+  color: inherit;
+  background-color: rgba(76, 86, 136, 0.303);
+  padding: 0 5px;
+  margin: 0;
+  border-radius: 3px;
+}
+
 // GLOBAL
 
 .bg-ibw {
@@ -11,6 +26,29 @@
 
 .bg-ibw-dark {
     background-color: #282d32;
+}
+
+.bg-blue-dark {
+  background-color: #30336b;
+}
+
+.bg-logo {
+  background-image: url('/images/logo-transparent.png');
+  background-repeat: repeat;
+  background-size: 150px 100px;
+  background-position: 0 10px;
+  background-color: #eeeef2;
+  border: 10px solid #fff;
+  backdrop-filter: blur(15px);
+  background-attachment: fixed;
+}
+
+.text-blue-dark {
+   color: #30336b;
+}
+
+.bg-purple {
+  background-color: #6c5ce7;
 }
 
 .section-config {
