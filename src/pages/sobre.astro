@@ -1,5 +1,5 @@
 ---
-import Card from "@components/Card.astro";
+import Companies from "@components/Companies.astro";
 import DefaultPage from "@layouts/DefaultPage.astro";
 import CTAButton from "@components/CTAButton.astro";
 import Testimonial from "@components/Testimonial.astro";
@@ -45,14 +45,16 @@ const articles: ITestimonial[] = [
 ---
 
 <DefaultPage title="Sobre" description="">
-  <header>
-    <div class="text-config">
-      <h1>
-        Somos uma empresa <mark>especializada</mark> em resolver asd asd asdop paosd pasd
-        alsdf paseoasdf asdfoiasdrfawe asdfoam asef.
-      </h1>
-    </div>
-  </header>
+  <div class="bg-about divider">
+    <header class="bg-blur-dark header-config">
+      <div class="text-content">
+        <h1>
+          Somos uma empresa <mark>especializada</mark> em resolver asd asd asdop
+          paosd pasd alsdf paseoasdf asdfoiasdrfawe asdfoam asef.
+        </h1>
+      </div>
+    </header>
+  </div>
 
   <!-- Corpo -->
   <section class="container p-5">
@@ -62,7 +64,7 @@ const articles: ITestimonial[] = [
       </figure>
 
       <div class="order-sm-1 col-4">
-        <h1>Um pouco sobre a IBW</h1>
+        <h1 class="text-ibw">Um pouco sobre a IBW</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
           libero? Et officia vitae facilis veritatis soluta doloremque aliquam
@@ -80,7 +82,7 @@ const articles: ITestimonial[] = [
     <div class="video-presentation text-blue-dark">
       <div class="row">
         <div class="col-12 mb-5">
-          <h1 class="text-center">Das palavras do técnico...</h1>
+          <h1 class="text-center text-uppercase">Das palavras do técnico...</h1>
         </div>
         <iframe
           class="shadow-light col-12 p-0"
@@ -93,7 +95,7 @@ const articles: ITestimonial[] = [
         >
         </iframe>
       </div>
-      <div class="col-5 mx-auto mt-5">
+      <div class="col-6 mx-auto mt-5">
         <CTAButton title={"Quero Tirar algumas dúvidas"} />
       </div>
     </div>
@@ -105,23 +107,6 @@ const articles: ITestimonial[] = [
       <Testimonial testimonials={articles} />
     </div>
   </section>
+
+  <Companies />
 </DefaultPage>
-
-<style lang="scss">
-  header {
-    padding: 10%;
-    text-align: center;
-    background-color: #272d32;
-    color: white;
-
-    .text-config {
-      width: 50%;
-      margin: 0 auto;
-      h1 {
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 3em;
-      }
-    }
-  }
-</style>

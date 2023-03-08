@@ -45,18 +45,21 @@ const articles: ITestimonial[] = [
 ---
 
 <DefaultPage title="FAQ" description="">
-  <header>
-    <div class="text-config">
-      <h1>FAQ</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus autem
-        sapiente possimus nihil officia labore consequuntur provident quae cum!
-        Provident optio a iste commodi animi repudiandae minus! Ea, illo in.
-      </p>
-    </div>
-  </header>
+  <div class="bg-question divider">
+    <header class="bg-blur-dark header-config">
+      <div class="text-content">
+        <h1>FAQ</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus,
+          fuga, dolorem modi dolores odit neque blanditiis ex tenetur
+          necessitatibus, cumque facilis. Quam molestiae provident excepturi,
+          mollitia iure laborum architecto dolorum?
+        </p>
+      </div>
+    </header>
+  </div>
 
-  <!-- Todos as perguntas -->
+  <!-- Todas as perguntas -->
   <section class="container faq js-scroll p-5" id="faq">
     <dl class="faq-lista js-accordion">
       <dt>Vocês vendem computadores de marca ou personalizados?</dt>
@@ -151,71 +154,6 @@ const articles: ITestimonial[] = [
 </DefaultPage>
 
 <style lang="scss">
-  header {
-    padding: 10%;
-    text-align: center;
-    background-color: #272d32;
-    color: white;
-
-    .text-config {
-      width: 50%;
-      margin: 0 auto;
-      h1 {
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 3em;
-      }
-    }
-  }
-
-  .faq-lista {
-    grid-column: 2 / 4;
-  }
-
-  .faq-lista dt {
-    font-weight: bold;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-    color: #272d32;
-  }
-
-  .faq-lista dt::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 10px;
-    margin-right: 10px;
-    background: #4c5688;
-  }
-
-  .faq-lista dd {
-    font-family: Helvetica, Arial;
-    margin-bottom: 0.5rem;
-    margin-left: 30px;
-  }
-
-  .js .js-accordion dd {
-    display: none;
-  }
-
-  .js-accordion dt {
-    cursor: pointer;
-  }
-
-  .js-accordion dt::after {
-    content: "⤵";
-    margin-left: 10px;
-  }
-
-  .js-accordion dt.ativo::after {
-    content: "⤴";
-  }
-
-  .js-accordion dd.ativo {
-    display: block;
-    animation: slideDown 0.5s forwards;
-  }
-
   @keyframes slideDown {
     from {
       opacity: 0;
@@ -226,16 +164,61 @@ const articles: ITestimonial[] = [
       opacity: 1;
     }
   }
-
-  .js .js-scroll {
-    opacity: 0;
-    transform: translate3d(-30px, 0, 0);
-    transition: 0.3s;
+  .faq-lista {
+    grid-column: 2 / 4;
+    dt {
+      font-weight: bold;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      color: #4c5688;
+      font-size: 1.3em;
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 10px;
+        margin-right: 10px;
+        background: #4c5688;
+      }
+    }
+    dd {
+      margin-bottom: 0.5rem;
+      margin-left: 30px;
+    }
   }
-
-  .js .js-scroll.ativo {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+  .js {
+    .js-accordion {
+      dd {
+        display: none;
+      }
+    }
+    .js-scroll {
+      opacity: 0;
+      transform: translate3d(-30px, 0, 0);
+      transition: 0.3s;
+    }
+    .js-scroll.ativo {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .js-accordion {
+    dt {
+      cursor: pointer;
+      &::after {
+        content: "⤵";
+        margin-left: 10px;
+      }
+    }
+    dt.ativo {
+      &::after {
+        content: "⤴";
+      }
+    }
+    dd.ativo {
+      display: block;
+      animation: slideDown 0.5s forwards;
+    }
   }
 </style>
 

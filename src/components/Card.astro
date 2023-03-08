@@ -10,28 +10,31 @@ interface Props {
 const { icon, title, description, buttonCTA, buttonLink } = Astro.props;
 ---
 
-<div class="card shadow-light bg-ibw-dark">
+<div class="my-card shadow-light bg-ibw-dark">
   <img src={icon} alt={title} width="100px"/>
   <h1>{title}</h1>
   <p>{description}</p>
 
-  {buttonCTA && buttonLink ? <a class="btn btn-success" href={buttonLink}> {buttonCTA}</a> : null}
+  {buttonCTA && buttonLink ? <a class="btn btn-ibw" href={buttonLink}> {buttonCTA}</a> : null}
 </div>
 
 <style lang="scss">
-  .card {
+  .my-card {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    flex: 1;
+    justify-content: space-between;
     border-radius: 5px;
     gap: 20px;
-    padding: 10px;
+    padding: 20px;
     color: white;
-    max-height: 500px;
-    height: 500px;
+    height: 100%;
+    max-height: 800px;
     text-align: center;
 
     h1 {
+        font-weight: bold;
         text-transform: uppercase;
         font-size: 1.3em;
     }

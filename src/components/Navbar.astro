@@ -4,7 +4,7 @@ import CTAButton from "./CTAButton.astro";
 ---
 
 <div>
-  <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="/"
         ><img src="/images/logo.png" alt="..." width="100" /></a
@@ -26,14 +26,8 @@ import CTAButton from "./CTAButton.astro";
           <li class="nav-item">
             <a class="nav-link" href="#services">Serviços</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Produtos</a>
-          </li>
           <li class="nav-item"><a class="nav-link" href="/sobre">Sobre</a></li>
           <li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contato</a>
-          </li>
         </ul>
 
         <div class="col-3">
@@ -67,7 +61,7 @@ import CTAButton from "./CTAButton.astro";
     padding-bottom: 0.5rem;
     background-color: rgba(40, 45, 50, 0.9);
     backdrop-filter: blur(15px);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    // border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 
     > .container {
       display: flex;
