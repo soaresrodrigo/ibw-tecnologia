@@ -4,7 +4,6 @@ import Card from "@components/Card.astro";
 import Companies from "@components/Companies.astro";
 import CTAButton from "@components/CTAButton.astro";
 import Testimonial from "@components/Testimonial.astro";
-import Divider from "@assets/icons/Divider.astro";
 import type { ITestimonial } from "@components/Testimonial.astro";
 
 const articles: ITestimonial[] = [
@@ -58,9 +57,6 @@ const articles: ITestimonial[] = [
   </div>
   <!-- SERVICES -->
   <section class="section-config">
-    <!-- <div class="divider">
-      <Divider />
-    </div> -->
     <div class="container">
       <div class="title-config">
         <h1>Serviços</h1>
@@ -68,7 +64,7 @@ const articles: ITestimonial[] = [
       </div>
 
       <div class="row m-2">
-        <div class="col-md-4">
+        <div class="col-lg-4 col-sm-12 mb-5">
           <Card
             icon="/icons/maintenance.svg"
             title="Manutenção"
@@ -77,7 +73,7 @@ const articles: ITestimonial[] = [
             buttonLink={"/servicos/manutencao"}
           />
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-sm-12 mb-5">
           <Card
             icon="/icons/business.svg"
             title="Soluções empresariais"
@@ -86,7 +82,7 @@ const articles: ITestimonial[] = [
             buttonLink={"/servicos/solucoes-empresariais"}
           />
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-sm-12 mb-5">
           <Card
             icon="/icons/sale.svg"
             title="Vendas"
@@ -109,7 +105,7 @@ const articles: ITestimonial[] = [
         <div class="container">
           <div class="row mx-auto">
             <iframe
-              class="shadow-light col-3 p-0"
+              class="shadow-light col-lg-3 col-sm-12 mb-5 p-0"
               src="https://www.youtube.com/embed/0nDdOe7pWlY"
               title="YouTube video player"
               height="300px"
@@ -118,7 +114,7 @@ const articles: ITestimonial[] = [
             >
             </iframe>
             <iframe
-              class="shadow-light col-3 p-0"
+              class="shadow-light col-lg-3 col-sm-12 mb-5 p-0"
               src="https://www.youtube.com/embed/0nDdOe7pWlY"
               height="300px"
               title="YouTube video player"
@@ -127,7 +123,7 @@ const articles: ITestimonial[] = [
             >
             </iframe>
             <iframe
-              class="shadow-light col-3 p-0"
+              class="shadow-light col-lg-3 col-sm-12 mb-5 p-0"
               height="300px"
               src="https://www.youtube.com/embed/0nDdOe7pWlY"
               title="YouTube video player"
@@ -147,26 +143,26 @@ const articles: ITestimonial[] = [
     <div class="container">
       <div class="row text-secondary">
         <div
-          class="col-3 m-1 p-3 mx-auto shadow-light border-top border-white"
+          class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-white"
         >
           <h2>300+</h2>
           <p class="text-white">Clientes atendidos</p>
         </div>
         <div
-          class="col-3 m-1 p-3 mx-auto shadow-light border-top border-warning"
+          class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-warning"
         >
           <h2>200+</h2>
           <p class="text-warning">Avaliações</p>
         </div>
         <div
-          class="col-3 m-1 p-3 mx-auto shadow-light border-top border-danger"
+          class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-danger"
         >
           <h2>100+</h2>
           <p class="text-danger">Produtos vendidos</p>
         </div>
       </div>
       <div class="row mt-5">
-        <div class="col-3 mx-auto">
+        <div class="col-sm-12 col-lg-3 mx-auto">
           <CTAButton />
         </div>
       </div>
@@ -183,10 +179,10 @@ const articles: ITestimonial[] = [
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          class="col-5 border border-muted p-0 shadow-light"
+          class="col-lg-5 col-sm-12 mb-5 border border-muted p-0 shadow-light"
         >
         </iframe>
-        <dl class="col-5 shadow-light">
+        <dl class="col-lg-5 col-sm-12 mb-5 shadow-light">
           <dt>Contatos</dt>
           <dd>
             <ul>
