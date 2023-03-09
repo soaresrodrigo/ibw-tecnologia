@@ -33,6 +33,7 @@ mark {
   padding: 0 5px;
   margin: 0;
   border-radius: 3px;
+  word-break: break-all;
 }
 
 a {
@@ -199,28 +200,21 @@ a {
 
 @media (max-width: 1000px) {
   .header-config {
-
     padding: 200px 50px;
+    max-width: 100vw;
+
     .text-content {
       width: 100%;
 
       h1 {
-        font-weight: bold;
-        font-size: 3em;
-        text-transform: uppercase;
-      }
-
-      p {
-        font-size: 1.5em;
-        color: #ccc;
+        font-size: 2em;
+        word-wrap: break-all;
       }
 
       button {
-        margin: auto;
         width: 100%;
       }
     }
-
   }
 
   .section-config {
