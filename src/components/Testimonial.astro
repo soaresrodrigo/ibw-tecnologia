@@ -115,6 +115,34 @@ const { testimonials } = Astro.props;
       }
     }
   }
+
+  @media (max-width: 1000px) {
+
+    .testimonial {
+
+
+    article {
+      width: 100%;
+      p {
+        text-align: left;
+      }
+
+      .author {
+        font-weight: bold;
+        text-align: right !important;
+      }
+    }
+
+    .avatars {
+      overflow-x: scroll;
+      gap: 30px;
+      height: 150px;
+      align-items: center;
+
+    }
+  }
+}
+
 </style>
 
 <script>

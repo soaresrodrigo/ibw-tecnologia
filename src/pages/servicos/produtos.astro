@@ -1,74 +1,33 @@
 ---
-import Card from "@components/Card.astro";
 import DefaultPage from "@layouts/DefaultPage.astro";
 import CTAButton from "@components/CTAButton.astro";
-import Testimonial from "@components/Testimonial.astro";
-import type { ITestimonial } from "@components/Testimonial.astro";
-
-const articles: ITestimonial[] = [
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Rodrigo Soares",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Laís Santana",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Danilo Ferreira",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Jessica Garcia",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Vinicius Silva",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-];
 ---
 
-<DefaultPage title="Soluções Empresariais" description="">
-  <header>
-    <div class="text-config">
-      <h1>Nossos produtos</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus autem
-        sapiente possimus nihil officia labore consequuntur provident quae cum!
-        Provident optio a iste commodi animi repudiandae minus! Ea, illo in.
-      </p>
-    </div>
-  </header>
+<DefaultPage title="Nossos produtos" description="">
+  <div class="bg-shop divider">
+    <header class="bg-blur-dark header-config">
+      <div class="text-content">
+        <h1>Nossos produtos</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus,
+          fuga, dolorem modi dolores odit neque blanditiis ex tenetur
+          necessitatibus, cumque facilis. Quam molestiae provident excepturi,
+          mollitia iure laborum architecto dolorum?
+        </p>
+      </div>
+    </header>
+  </div>
 
   <!-- Todos os artigos; -->
-  <section class="container space">
+  <section class="section-products">
     <!-- Computador -->
-    <article class="row align-items-center justify-content-around">
-      <figure class="order-sm-1 col-4">
-        <img
-          src="/images/products/computador.webp"
-          height="400"
-          alt="Computador"
-        />
-      </figure>
-
-      <div class="order-sm-2 col-4">
+    <article>
+      <img
+        src="/images/products/computador.webp"
+        height="400"
+        alt="Computador"
+      />
+      <div class="text-content">
         <h1>Computador</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
@@ -81,19 +40,17 @@ const articles: ITestimonial[] = [
             >Mais de 200 Vendas</span
           >
         </p>
-        <div class="d-block">
+        <div>
           <CTAButton title={"Comprar"} />
         </div>
       </div>
     </article>
 
     <!-- Memória -->
-    <article class="row align-items-center justify-content-around">
-      <figure class="order-sm-2 col-4">
-        <img src="/images/products/memoria.webp" height="400" alt="" />
-      </figure>
+    <article>
+      <img src="/images/products/memoria.webp" height="400" alt="" />
 
-      <div class="order-sm-1 col-4">
+      <div class="text-content">
         <h1>Memória</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
@@ -113,12 +70,10 @@ const articles: ITestimonial[] = [
     </article>
 
     <!-- SSD -->
-    <article class="row align-items-center justify-content-around">
-      <figure class="order-sm-1 col-4">
-        <img src="/images/products/ssd.webp" height="400" alt="" />
-      </figure>
+    <article>
+      <img src="/images/products/ssd.webp" height="400" alt="" />
 
-      <div class="order-sm-2 col-4">
+      <div class="text-content">
         <h1>SSD</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
@@ -138,12 +93,10 @@ const articles: ITestimonial[] = [
     </article>
 
     <!-- Mouse -->
-    <article class="row align-items-center justify-content-around">
-      <figure class="order-sm-2 col-4">
-        <img src="/images/products/mouse.webp" width="400" alt="" />
-      </figure>
+    <article>
+      <img src="/images/products/mouse.webp" width="400" alt="" />
 
-      <div class="order-sm-1 col-4">
+      <div class="text-content">
         <h1>Mouse</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
@@ -163,12 +116,15 @@ const articles: ITestimonial[] = [
     </article>
 
     <!-- Teclado -->
-    <article class="row align-items-center justify-content-around">
-      <figure class="order-sm-1 col-4">
-        <img src="/images/products/teclado.webp" width="400" height="400" alt="" />
-      </figure>
+    <article>
+      <img
+        src="/images/products/teclado.webp"
+        width="400"
+        height="400"
+        alt=""
+      />
 
-      <div class="order-sm-2 col-4">
+      <div class="text-content">
         <h1>Teclado</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
@@ -193,37 +149,73 @@ const articles: ITestimonial[] = [
     <div class="container">
       <div class="row">
         <div class="col-12 mb-5">
-          <h1 class="text-white text-center">Temos mais produtos à venda, venha conferir!</h1>
+          <h1 class="text-white text-center">
+            Temos mais produtos à venda, venha conferir!
+          </h1>
         </div>
-        <div class="col-4 mx-auto">
+        <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
           <CTAButton title={"Confira mais produtos"} />
         </div>
       </div>
     </div>
   </section>
-
-  <!--  TESTIMONIALS -->
-  <!-- <section class="section-config bg-ibw">
-    <div class="container">
-      <Testimonial testimonials={articles} />
-    </div>
-  </section> -->
 </DefaultPage>
 
 <style lang="scss">
-  header {
-    padding: 10%;
-    text-align: center;
-    background-color: #272d32;
-    color: white;
+  .section-products {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 3em;
 
-    .text-config {
-      width: 50%;
-      margin: 0 auto;
-      h1 {
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 3em;
+    article {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      padding: 3em;
+      gap: 10em;
+
+      .text-content {
+        padding: 1em;
+        width: 30%;
+
+        h1 {
+          color: #4c5688;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 1.7em;
+        }
+
+        p {
+          color: #666;
+        }
+      }
+
+      &:nth-child(even) {
+        background-color: #ddd;
+        flex-direction: row;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .section-products {
+      article {
+        gap: 1em;
+        text-align: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 1em;
+
+        img {
+          margin: auto;
+          max-width: 100%;
+        }
+
+        .text-content {
+          width: 100%;
+          margin: 0 auto;
+        }
       }
     }
   }

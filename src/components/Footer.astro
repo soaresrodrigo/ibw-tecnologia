@@ -13,17 +13,22 @@ const currentYear = new Date().getFullYear();
   <footer>
     <div class="container">
       <div class="row mb-5">
-        <div class="col-md-3 mx-auto">
-          <img src="/images/logo.png" alt="logo" height="100" class="mx-auto d-block" />
+        <div class="col-lg-3 mx-auto">
+          <img
+            src="/images/logo.png"
+            alt="logo"
+            height="100"
+            class="mx-auto d-block"
+          />
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6 item text">
+        <div class="col-lg-5 col-sm-8 item text">
           <h3>{title}</h3>
           <p>Empresa Especializada em Manutenção de Notebook e Computador.</p>
           <p>Soluções em Tecnologia para Empresas.</p>
         </div>
-        <div class="col-sm-6 col-md-3 item">
+        <div class="col-lg-3 col-sm-4 item">
           <h3>Contatos</h3>
           <ul>
             <li>
@@ -37,32 +42,31 @@ const currentYear = new Date().getFullYear();
               <a
                 href="tel:+5571987465932"
                 aria-label="Telefone"
-                title="Telefone"
-                >(71) 98746-5932</a
+                title="Telefone">(71) 98746-5932</a
               >
             </li>
           </ul>
         </div>
-        <div class="col-sm-6 col-md-1 item">
+        <div class="col-sm-8 col-lg-2 item">
           <h3>Endereço</h3>
           <ul>
             <li>
               <a
                 target="_blank"
                 href="https://www.google.com/maps/search/Tv.%20Ant%C3%B4nio%20Fel%C3%ADcio%20P%C3%ADmentel%2C%2013A%20-%20Centro%2C%20Lauro%20de%20Freitas%20-%20BA%2C%2042700-000%2C%20Brasil/@-12.8945,-38.3225,17z?hl=pt-BR"
-                >Tv. Antônio Felício Pímentel, 13A - Centro, Lauro de Freitas - BA,
-                42700-000, Brasil</a>
-
+                >Rua Manoel Raimundo de Souza, 13 - 1º andar - Centro, Lauro de
+                Freitas - BA, 42702-660</a
+              >
             </li>
           </ul>
         </div>
-        <div class="col-sm-6 col-md-2 item text">
+        <div class="col-sm-4 col-lg-2 item text">
           <h3>Horários</h3>
-            <p>seg-sex: 9hrs - 17hrs</p>
-            <p>sab: 8hrs - 12hrs</p>
+          <p>seg-sex: 9hrs - 17hrs</p>
+          <p>sab: 8hrs - 12hrs</p>
         </div>
 
-        <div class="col social">
+        <div class="col-lg-12 social">
           <a href="#"><Instagram /></a>
           <a href="#"><Facebook /></a>
           <a href="#"><Youtube /></a>
@@ -71,7 +75,14 @@ const currentYear = new Date().getFullYear();
         </div>
       </div>
       <hr />
-      <p class="copyright">{title} © {currentYear}</p>
+      <p class="copyright">
+        <b>{title}</b> © {currentYear} | Desenvolvido por <a
+          target="_blank"
+          href="https://comecedaqui.github.io"
+        >
+          &gt; Comece Daqui _
+        </a>
+      </p>
     </div>
   </footer>
 </div>
@@ -146,7 +157,18 @@ const currentYear = new Date().getFullYear();
     text-align: center;
     padding-top: 24px;
     opacity: 0.3;
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 0;
+
+    a {
+      font-weight: bold;
+      display: inline-block;
+      color: white;
+      text-decoration: dashed;
+
+      &:hover {
+        color: #6c5ce7;
+      }
+    }
   }
 </style>
