@@ -59,63 +59,63 @@ const articles: ITestimonial[] = [
     </header>
   </div>
 
-    <!-- Seção dos cards -->
-    <section class="container bg-light p-5">
-      <h2 class="text-center pb-5 text-blue-dark text-uppercase">Esses são os nossos serviços</h2>
-      <div class="row mt-2 section-cards">
-        <div class="col-md-4">
-          <Card
-            icon="/icons/operational-system.svg"
-            title="Sistema Operacional"
-            description="Reinstalação e Configuração do Sistema, Correção de erros, Atualização, Restauração, Otimização para mais eficiência e performance."
-          />
-        </div>
-        <div class="col-md-4">
-          <Card
-            icon="/icons/clean.svg"
-            title="Higienização"
-            description="Limpeza interna e externa do seu equipamento. Esse procedimento é muito importante para manter o bomfuncionamento e aumentar a vida útil."
-          />
-        </div>
-        <div class="col-md-4">
-          <Card
-            icon="/icons/motherboard.svg"
-            title="Reparo de Placa Mãe"
-            description="Temos um laboratório completo, equipe especializada, e utilizamos as melhores técnicas do mercado para reparar a placa mãe do seu notebook ou Desktop."
-          />
-        </div>
+  <!-- Seção dos cards -->
+  <section class="container bg-light p-5">
+    <h2 class="text-center pb-5 text-blue-dark text-uppercase">
+      Esses são os nossos serviços
+    </h2>
+    <div class="row mt-2 section-cards">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <Card
+          icon="/icons/operational-system.svg"
+          title="Sistema Operacional"
+          description="Reinstalação e Configuração do Sistema, Correção de erros, Atualização, Restauração, Otimização para mais eficiência e performance."
+        />
       </div>
-      <div class="row mt-5">
-        <div class="col-md-4">
-          <Card
-            icon="/icons/component.svg"
-            title="Troca de Peças"
-            description="Telas, memórias, HDs, Placas de Vídeo, Processadores, Baterias, Teclados, Coolers, e demais peças com as melhores soluções."
-          />
-        </div>
-        <div class="col-md-4">
-          <Card
-            icon="/icons/support.svg"
-            title="Consultoria e Suporte Remoto"
-            description="Podemos te auxiliar na compra do seu equipamento, te ajudando a tomar a melhor decisão. Também fornecemos assistência remota, sem precisar ir até o equipamento."
-          />
-        </div>
-        <div class="col-md-4">
-          <Card
-            icon="/icons/maintenance.svg"
-            title="Reparo de Carcaça"
-            description="É bem comum a carcaça do notebook apresentar problemas ao longo do tempo, mas somos especialistas nesse tipo de defeito e podemos fazer a recuperação."
-          />
-        </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <Card
+          icon="/icons/clean.svg"
+          title="Higienização"
+          description="Limpeza interna e externa do seu equipamento. Esse procedimento é muito importante para manter o bomfuncionamento e aumentar a vida útil."
+        />
       </div>
-    </section>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <Card
+          icon="/icons/motherboard.svg"
+          title="Reparo de Placa Mãe"
+          description="Temos um laboratório completo, equipe especializada, e utilizamos as melhores técnicas do mercado para reparar a placa mãe do seu notebook ou Desktop."
+        />
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <Card
+          icon="/icons/component.svg"
+          title="Troca de Peças"
+          description="Telas, memórias, HDs, Placas de Vídeo, Processadores, Baterias, Teclados, Coolers, e demais peças com as melhores soluções."
+        />
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <Card
+          icon="/icons/support.svg"
+          title="Consultoria e Suporte Remoto"
+          description="Podemos te auxiliar na compra do seu equipamento, te ajudando a tomar a melhor decisão. Também fornecemos assistência remota, sem precisar ir até o equipamento."
+        />
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <Card
+          icon="/icons/maintenance.svg"
+          title="Reparo de Carcaça"
+          description="É bem comum a carcaça do notebook apresentar problemas ao longo do tempo, mas somos especialistas nesse tipo de defeito e podemos fazer a recuperação."
+        />
+      </div>
+    </div>
+  </section>
 
   <!-- Vídeo falando sobre o serviço de manutenção; -->
-  <section class="bg-dark">
-    <div class="video-presentation text-white">
+  <section class="bg-dark text-white section-config">
+    <div class="container">
       <div class="row">
-        <div class="col-6">
-          <h2>Entenda como a manutenção é feita</h2>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <h2 class="text-uppercase">Entenda como a manutenção é feita</h2>
           <p class="text-light">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab
             repellendus quas eum natus dolorem libero neque nulla qui repellat
@@ -123,26 +123,25 @@ const articles: ITestimonial[] = [
             Omnis, nobis a?
           </p>
         </div>
-        <div class="col-6">
-          <iframe
-            class="shadow-light"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/bPexdxAGU4w"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          >
-          </iframe>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="embed-responsive embed-responsive-21by9">
+            <iframe
+              class="shadow-light w-100"
+              height="350"
+              src="https://www.youtube.com/embed/bPexdxAGU4w"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-10 mx-auto mt-5">
+          <CTAButton />
         </div>
       </div>
-      <div class="col-5 mx-auto mt-5">
-        <CTAButton />
       </div>
-    </div>
   </section>
-
-
 
   <!--  TESTIMONIALS -->
   <section class="section-config bg-ibw">
@@ -152,13 +151,3 @@ const articles: ITestimonial[] = [
   </section>
 </DefaultPage>
 
-<style lang="scss">
-  .video-presentation {
-    width: 50%;
-    margin: 0 auto;
-    padding: 5%;
-  }
-
-  .section-cards {
-  }
-</style>

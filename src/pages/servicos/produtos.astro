@@ -153,7 +153,7 @@ import CTAButton from "@components/CTAButton.astro";
             Temos mais produtos à venda, venha conferir!
           </h1>
         </div>
-        <div class="col-4 mx-auto">
+        <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
           <CTAButton title={"Confira mais produtos"} />
         </div>
       </div>
@@ -192,8 +192,30 @@ import CTAButton from "@components/CTAButton.astro";
       }
 
       &:nth-child(even) {
-        background-color: #eee;
+        background-color: #ddd;
         flex-direction: row;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .section-products {
+      article {
+        gap: 1em;
+        text-align: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 1em;
+
+        img {
+          margin: auto;
+          max-width: 100%;
+        }
+
+        .text-content {
+          width: 100%;
+          margin: 0 auto;
+        }
       }
     }
   }
