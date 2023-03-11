@@ -60,7 +60,7 @@ const articles: ITestimonial[] = [
   </div>
 
   <!-- Todas as perguntas -->
-  <section class="container faq js-scroll p-5" id="faq">
+  <section class="js container faq js-scroll p-5" id="faq">
     <dl class="faq-lista js-accordion">
       <dt>Vocês vendem computadores de marca ou personalizados?</dt>
       <dd>
@@ -165,6 +165,9 @@ const articles: ITestimonial[] = [
     }
   }
   .faq-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     grid-column: 2 / 4;
     dt {
       font-weight: bold;
@@ -195,7 +198,6 @@ const articles: ITestimonial[] = [
     .js-scroll {
       opacity: 0;
       transform: translate3d(-30px, 0, 0);
-      transition: 0.3s;
     }
     .js-scroll.ativo {
       opacity: 1;
@@ -231,8 +233,8 @@ const articles: ITestimonial[] = [
     accordionList[0].nextElementSibling?.classList.add(classActive);
 
     function activeAccordion(e: any) {
-      e.classList.toggle(classActive);
-      e.nextElementSibling.classList.toggle(classActive);
+      e.target.classList.toggle(classActive);
+      e.target.nextElementSibling.classList.toggle(classActive);
     }
 
     accordionList.forEach((item) => {
