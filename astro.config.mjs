@@ -9,7 +9,7 @@ const site = import.meta.env.BASE_URL;
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ibw.com.br',
+  site: 'https://ibw.com.br' || site,
   integrations: [image()],
   output: "server",
   adapter: netlify()

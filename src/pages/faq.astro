@@ -165,9 +165,7 @@ const articles: ITestimonial[] = [
     }
   }
   .faq-lista {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
     grid-column: 2 / 4;
     dt {
       font-weight: bold;
@@ -219,7 +217,7 @@ const articles: ITestimonial[] = [
     }
     dd.ativo {
       display: block;
-      animation: slideDown 0.5s forwards;
+      animation: slideDown .5s both;
     }
   }
 </style>

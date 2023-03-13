@@ -23,14 +23,28 @@ import CTAButton from "./CTAButton.astro";
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Serviços</a>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Serviços
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item text-blue-dark" href="/servicos/manutencao">Manutenção</a>
+              <a class="dropdown-item text-blue-dark" href="/servicos/solucoes-empresariais">Soluções empresariais</a>
+              <a class="dropdown-item text-blue-dark" href="/servicos/produtos">Produtos</a>
+            </div>
           </li>
           <li class="nav-item"><a class="nav-link" href="/sobre">Sobre</a></li>
           <li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
         </ul>
 
-        <div class="col-3">
+        <div class="">
           <CTAButton />
         </div>
       </div>
@@ -52,6 +66,11 @@ import CTAButton from "./CTAButton.astro";
   $border-color_1: rgba(0, 0, 0, 0.1);
   $border-color_2: rgba(255, 255, 255, 0.1);
 
+  .efect-navbar {
+    background-color: rgba(40, 45, 50, 0.9);
+    backdrop-filter: blur(15px);
+  }
+
   .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -59,9 +78,6 @@ import CTAButton from "./CTAButton.astro";
     justify-content: space-between;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    background-color: rgba(40, 45, 50, 0.9);
-    backdrop-filter: blur(15px);
-    // border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 
     > .container {
       display: flex;
@@ -621,17 +637,18 @@ import CTAButton from "./CTAButton.astro";
 </style>
 
 <script>
-  window.addEventListener("DOMContentLoaded", (event) => {
+  window.addEventListener("DOMContentLoaded", () => {
     // Navbar shrink function
     var navbarShrink = function () {
       const navbarCollapsible = document.body.querySelector("#mainNav");
       if (!navbarCollapsible) {
         return;
       }
-      if (window.scrollY === 0) {
-        navbarCollapsible.classList.remove("navbar-shrink");
+
+      if (window.scrollY === 0 && window.innerWidth >= 998) {
+        navbarCollapsible.classList.remove("efect-navbar");
       } else {
-        navbarCollapsible.classList.add("navbar-shrink");
+        navbarCollapsible.classList.add("efect-navbar");
       }
     };
 
@@ -651,13 +668,11 @@ import CTAButton from "./CTAButton.astro";
       });
     }
 
-    const teste = document.addEventListener("click", () => {});
-
     // Collapse responsive navbar when toggler is visible
     const navbarToggler: Element | any =
       document.body.querySelector(".navbar-toggler");
     const responsiveNavItems: any = [].slice.call(
-      document.querySelectorAll("#navbarResponsive .nav-link")
+      document.querySelectorAll("#navbarResponsive > .nav-link:not(.dropdown)")
     );
     responsiveNavItems.map(function (responsiveNavItem: any) {
       responsiveNavItem.addEventListener("click", () => {
@@ -667,4 +682,22 @@ import CTAButton from "./CTAButton.astro";
       });
     });
   });
+
+  const dropdownToggle: HTMLElement | null =
+    document.querySelector(".dropdown-toggle");
+
+  if (dropdownToggle) {
+    dropdownToggle.addEventListener("click", () => {
+      const dropdownMenu: HTMLElement | null =
+        document.querySelector(".dropdown-menu");
+
+      if (dropdownMenu) {
+        if (dropdownMenu.style.display === "none") {
+          dropdownMenu.style.display = "block";
+        } else {
+          dropdownMenu.style.display = "none";
+        }
+      }
+    });
+  }
 </script>
