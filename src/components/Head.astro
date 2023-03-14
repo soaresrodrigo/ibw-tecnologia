@@ -1,6 +1,6 @@
 ---
 // import '../styles/global.css';
-import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
+import "node_modules/bootstrap/dist/css/bootstrap.min.css";
 // import bootstrap from "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js?url"; #todo colocar em script (https://stackoverflow.com/questions/73879494/import-bootstrap-in-astro)
 
 export interface Props {
@@ -44,3 +44,19 @@ const loadedImage = new URL(image, Astro.url);
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={loadedImage} /> -->
+
+<!-- Google tag (gtag.js) -->
+<script
+  type="text/partytown"
+  src="https://www.googletagmanager.com/gtag/js?id=G-LEP3ZW04J0"
+></script>
+
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-LEP3ZW04J0");
+</script>
