@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ibwtecnologia.com.br
+
+# Sitemaps
+Sitemap: https://ibwtecnologia.com.br/sitemap-0.xml
+Sitemap: https://ibwtecnologia.com.br/sitemap-index.xml
