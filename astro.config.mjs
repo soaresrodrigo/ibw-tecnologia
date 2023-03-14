@@ -2,13 +2,11 @@ import { defineConfig } from 'astro/config';
 import image from "@astrojs/image";
 import netlify from "@astrojs/netlify/functions";
 import partytown from "@astrojs/partytown";
+import sitemap from "@astrojs/sitemap";
 
-const site = import.meta.env.BASE_URL;
-
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://ibw.com.br' || site,
-  integrations: [image(), partytown()],
+  site: 'https://ibwtecnologia.com.br' ,
+  integrations: [image(), partytown(), sitemap()],
   output: "server",
   adapter: netlify()
 });
