@@ -63,8 +63,8 @@ const articles: ITestimonial[] = [
         <p>Clique em <mark>Saiba mais</mark> para obter mais detalhes.</p>
       </div>
 
-      <div class="row m-2">
-        <div class="col-lg-4 col-sm-12 mb-5">
+      <div class="row m-2 js">
+        <div class="col-lg-4 col-sm-12 mb-5 js-scroll">
           <Card
             icon="/icons/maintenance.svg"
             title="Manutenção"
@@ -73,7 +73,7 @@ const articles: ITestimonial[] = [
             buttonLink={"/servicos/manutencao"}
           />
         </div>
-        <div class="col-lg-4 col-sm-12 mb-5">
+        <div class="col-lg-4 col-sm-12 mb-5 js-scroll">
           <Card
             icon="/icons/business.svg"
             title="Soluções empresariais"
@@ -82,7 +82,7 @@ const articles: ITestimonial[] = [
             buttonLink={"/servicos/solucoes-empresariais"}
           />
         </div>
-        <div class="col-lg-4 col-sm-12 mb-5">
+        <div class="col-lg-4 col-sm-12 mb-5 js-scroll">
           <Card
             icon="/icons/sale.svg"
             title="Vendas"
@@ -95,17 +95,16 @@ const articles: ITestimonial[] = [
     </div>
   </section>
 
-  <section
-    class="section-config bg-blue-dark align-items-center justify-content-around video-presentation">
+  <section class="section-config bg-blue-dark align-items-center justify-content-around video-presentation">
     <div class="text-white">
       <div class="row">
         <div class="col-12 mb-5">
           <h1 class="text-center text-uppercase">Veja um pouco como a <mark>IBW</mark> trabalha...</h1>
         </div>
         <div class="container">
-          <div class="row mx-auto">
+          <div class="row mx-auto js">
             <iframe
-              class="shadow-light col-lg-3 col-sm-12 mb-5 p-0"
+              class="shadow-light col-lg-3 col-sm-12 mb-5 p-0 js-scroll"
               src="https://www.youtube.com/embed/0nDdOe7pWlY"
               title="YouTube video player"
               height="300px"
@@ -114,7 +113,7 @@ const articles: ITestimonial[] = [
             >
             </iframe>
             <iframe
-              class="shadow-light col-lg-3 col-sm-12 mb-5 p-0"
+              class="shadow-light col-lg-3 col-sm-12 mb-5 p-0 js-scroll"
               src="https://www.youtube.com/embed/0nDdOe7pWlY"
               height="300px"
               title="YouTube video player"
@@ -123,7 +122,7 @@ const articles: ITestimonial[] = [
             >
             </iframe>
             <iframe
-              class="shadow-light col-lg-3 col-sm-12 mb-5 p-0"
+              class="shadow-light col-lg-3 col-sm-12 mb-5 p-0 js-scroll"
               height="300px"
               src="https://www.youtube.com/embed/0nDdOe7pWlY"
               title="YouTube video player"
@@ -141,28 +140,24 @@ const articles: ITestimonial[] = [
   <!-- QUANTITY SERVICES -->
   <section class="section-config bg-dark">
     <div class="container">
-      <div class="row text-secondary">
-        <div
-          class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-white"
-        >
+      <div class="row text-secondary js">
+        <div class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-white js-scroll">
           <h2>300+</h2>
           <p class="text-white">Clientes atendidos</p>
         </div>
         <div
-          class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-warning"
-        >
+          class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-warning js-scroll">
           <h2>200+</h2>
           <p class="text-warning">Avaliações</p>
         </div>
         <div
-          class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-danger"
-        >
+          class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-danger js-scroll">
           <h2>100+</h2>
           <p class="text-danger">Produtos vendidos</p>
         </div>
       </div>
-      <div class="row mt-5">
-        <div class="col-sm-12 col-lg-3 mx-auto">
+      <div class="row mt-5 js">
+        <div class="col-sm-12 col-lg-3 mx-auto js-scroll">
           <CTAButton />
         </div>
       </div>
@@ -170,8 +165,8 @@ const articles: ITestimonial[] = [
   </section>
 
   <!-- Endereço -->
-  <div class="bg-map">
-    <section class="container section-address">
+  <div class="bg-map js">
+    <section class="container section-address js-scroll">
       <div class="row">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.2049053482374!2d-38.32468588464969!3d-12.894541890906499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71617a43c76563b%3A0xec53d5369ff3f53f!2sIBW%20TECNOLOGIA%20-%20Assist%C3%AAncia%20T%C3%A9cnica%20Especializada%20em%20Manuten%C3%A7%C3%A3o%20de%20Computadores%20e%20Notebooks.!5e0!3m2!1spt-BR!2sbr!4v1677886480740!5m2!1spt-BR!2sbr"
@@ -234,8 +229,8 @@ const articles: ITestimonial[] = [
   </div>
 
   <!-- TESTIMONIALS -->
-  <section class="section-config bg-ibw">
-    <div class="container">
+  <section class="section-config bg-ibw js">
+    <div class="container js-scroll">
       <Testimonial testimonials={articles} />
     </div>
   </section>

@@ -60,14 +60,11 @@ const articles: ITestimonial[] = [
   </div>
 
   <!-- Todas as perguntas -->
-  <section class="js container faq js-scroll p-5" id="faq">
-    <dl class="faq-lista js-accordion">
-      <dt>Vocês vendem computadores de marca ou personalizados?</dt>
+  <section class="js container faq p-5" id="faq">
+    <dl class="faq-lista js-accordion js-scroll">
+      <dt>Quanto tempo leva para reparar meu notebook ou computador?</dt>
       <dd>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
-        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
-        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
-        magni?
+        O tempo necessário para reparar seu notebook ou computador pode variar dependendo da complexidade do problema e do tipo de serviço necessário. Geralmente, a maioria dos reparos leva entre <b>1 a 5 dias úteis</b>.
       </dd>
       <dt>Qual é a política de garantia dos seus produtos?</dt>
       <dd>
@@ -146,8 +143,8 @@ const articles: ITestimonial[] = [
   </section>
 
   <!--  TESTIMONIALS -->
-  <section class="section-config bg-ibw">
-    <div class="container">
+  <section class="section-config bg-ibw js">
+    <div class="container js-scroll">
       <Testimonial testimonials={articles} />
     </div>
   </section>
@@ -193,14 +190,6 @@ const articles: ITestimonial[] = [
         display: none;
       }
     }
-    .js-scroll {
-      opacity: 0;
-      transform: translate3d(-30px, 0, 0);
-    }
-    .js-scroll.ativo {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
   }
   .js-accordion {
     dt {
@@ -210,12 +199,12 @@ const articles: ITestimonial[] = [
         margin-left: 10px;
       }
     }
-    dt.ativo {
+    dt.active {
       &::after {
         content: "⤴";
       }
     }
-    dd.ativo {
+    dd.active {
       display: block;
       animation: slideDown .5s both;
     }
@@ -225,7 +214,7 @@ const articles: ITestimonial[] = [
 <script>
   const accordionList = document.querySelectorAll(".js-accordion dt");
 
-  const classActive = "ativo";
+  const classActive = "active";
   if (accordionList.length) {
     accordionList[0].classList.add(classActive);
     accordionList[0].nextElementSibling?.classList.add(classActive);

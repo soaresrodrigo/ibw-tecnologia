@@ -49,8 +49,7 @@ const articles: ITestimonial[] = [
     <header class="bg-blur-dark header-config">
       <div class="text-content">
         <h1>
-          Somos uma empresa <mark>especializada</mark> em resolver asd asd asdop
-          paosd pasd alsdf paseoasdf asdfoiasdrfawe asdfoam asef.
+          Nosso compromisso é prestar serviços de <mark>excelência</mark> para garantir a satisfação de nossos clientes e melhoria de seus negócios.
         </h1>
       </div>
     </header>
@@ -58,14 +57,14 @@ const articles: ITestimonial[] = [
 
   <!-- Corpo -->
   <section class="container p-5">
-    <article class="row align-items-center justify-content-around">
+    <article class="row align-items-center justify-content-around js">
       <img
         src="/icons/about-us.svg"
-        class="order-sm-1 img-fluid col-lg-6 col-md-8 col-sm-12 mb-5"
+        class="order-sm-1 img-fluid col-lg-6 col-md-8 col-sm-12 mb-5 js-scroll"
         alt=""
       />
 
-      <div class="order-sm-2 col-lg-4 col-sm-12">
+      <div class="order-sm-2 col-lg-4 col-sm-12 js-scroll">
         <h1 class="text-ibw">Um pouco sobre a IBW</h1>
         <p>
           Somos uma empresa especializada em manutenção de <mark>Notebook</mark> e
@@ -89,10 +88,8 @@ const articles: ITestimonial[] = [
   </section>
 
   <!-- Vídeo falando sobre o serviço de manutenção; -->
-  <section
-    class="section-config bg-logo align-items-center justify-content-around"
-  >
-    <div class="video-presentation text-blue-dark">
+  <section class="section-config bg-logo align-items-center justify-content-around js">
+    <div class="video-presentation text-blue-dark js-scroll">
       <div class="row">
         <div class="col-12 mb-5">
           <h1 class="text-center text-uppercase font-weight-bold">
@@ -110,15 +107,15 @@ const articles: ITestimonial[] = [
         >
         </iframe>
       </div>
-      <div class="col-lg-6 col-sm-12 col-md-6 mx-auto mt-5">
+      <div class="col-lg-6 col-sm-12 col-md-6 mx-auto mt-5 js-scroll">
         <CTAButton title={"Quero Tirar algumas dúvidas"} />
       </div>
     </div>
   </section>
 
   <!--  TESTIMONIALS -->
-  <section class="section-config bg-ibw">
-    <div class="container">
+  <section class="section-config bg-ibw js">
+    <div class="container js-scroll">
       <Testimonial testimonials={articles} />
     </div>
   </section>

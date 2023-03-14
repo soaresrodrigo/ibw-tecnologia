@@ -9,7 +9,13 @@ import CTAButton from "@components/CTAButton.astro";
       <div class="text-content">
         <h1>Nossos produtos</h1>
         <p>
-          Oferecemos serviços de informática sob medida para atender às suas necessidades empresariais. Nossa equipe de especialistas em TI está preparada para oferecer suporte técnico, consultoria em TI, implantação de tecnologia e gerenciamento de rede para ajudá-lo a alcançar seus objetivos de negócios. Entre em contato conosco hoje mesmo para saber como podemos ajudá-lo a aproveitar ao máximo as suas soluções de TI.
+          Oferecemos serviços de informática sob medida para atender às suas
+          necessidades empresariais. Nossa equipe de especialistas em TI está
+          preparada para oferecer suporte técnico, consultoria em TI,
+          implantação de tecnologia e gerenciamento de rede para ajudá-lo a
+          alcançar seus objetivos de negócios. Entre em contato conosco hoje
+          mesmo para saber como podemos ajudá-lo a aproveitar ao máximo as suas
+          soluções de TI.
         </p>
       </div>
     </header>
@@ -18,13 +24,14 @@ import CTAButton from "@components/CTAButton.astro";
   <!-- Todos os artigos; -->
   <section class="section-products">
     <!-- Computador -->
-    <article>
+    <article class="js">
       <img
         src="/images/products/computador.webp"
+        class="js-scroll"
         height="400"
         alt="Computador"
       />
-      <div class="text-content">
+      <div class="text-content js-scroll">
         <h1>Computador</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
@@ -38,16 +45,24 @@ import CTAButton from "@components/CTAButton.astro";
           >
         </p>
         <div>
-          <CTAButton title={'Comprar'} text={"Olá! Vim através do site e gostaria de saber mais sobre os computadores a venda."} />
+          <CTAButton
+            title={"Comprar"}
+            text={"Olá! Vim através do site e gostaria de saber mais sobre os computadores a venda."}
+          />
         </div>
       </div>
     </article>
 
     <!-- Memória -->
-    <article>
-      <img src="/images/products/memoria.webp" height="400" alt="" />
+    <article class="js">
+      <img
+        src="/images/products/memoria.webp"
+        class="js-scroll"
+        height="400"
+        alt=""
+      />
 
-      <div class="text-content">
+      <div class="text-content js-scroll">
         <h1>Memória</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
@@ -61,16 +76,24 @@ import CTAButton from "@components/CTAButton.astro";
           >
         </p>
         <div class="d-block">
-          <CTAButton title={"Comprar"} text={"Olá! Vim através do site e gostaria de saber mais sobre as memórias a venda."}  />
+          <CTAButton
+            title={"Comprar"}
+            text={"Olá! Vim através do site e gostaria de saber mais sobre as memórias a venda."}
+          />
         </div>
       </div>
     </article>
 
     <!-- SSD -->
-    <article>
-      <img src="/images/products/ssd.webp" height="400" alt="" />
+    <article class="js">
+      <img
+        src="/images/products/ssd.webp"
+        class="js-scroll"
+        height="400"
+        alt=""
+      />
 
-      <div class="text-content">
+      <div class="text-content js-scroll">
         <h1>SSD</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
@@ -84,16 +107,19 @@ import CTAButton from "@components/CTAButton.astro";
           >
         </p>
         <div class="d-block">
-          <CTAButton title={"Comprar"} text={"Olá! Vim através do site e gostaria de saber mais sobre os SSD a venda."}  />
+          <CTAButton
+            title={"Comprar"}
+            text={"Olá! Vim através do site e gostaria de saber mais sobre os SSD a venda."}
+          />
         </div>
       </div>
     </article>
 
     <!-- Mouse -->
-    <article>
+    <article class="js">
       <img src="/images/products/mouse.webp" width="400" alt="" />
 
-      <div class="text-content">
+      <div class="text-content js-scroll">
         <h1>Mouse</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
@@ -107,21 +133,25 @@ import CTAButton from "@components/CTAButton.astro";
           >
         </p>
         <div class="d-block">
-          <CTAButton title={"Comprar"} text={"Olá! Vim através do site e gostaria de saber mais sobre os mouses a venda."} />
+          <CTAButton
+            title={"Comprar"}
+            text={"Olá! Vim através do site e gostaria de saber mais sobre os mouses a venda."}
+          />
         </div>
       </div>
     </article>
 
     <!-- Teclado -->
-    <article>
+    <article class="js">
       <img
         src="/images/products/teclado.webp"
         width="400"
+        class="js-scroll"
         height="400"
         alt=""
       />
 
-      <div class="text-content">
+      <div class="text-content js-scroll">
         <h1>Teclado</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
@@ -135,15 +165,18 @@ import CTAButton from "@components/CTAButton.astro";
           >
         </p>
         <div class="d-block">
-          <CTAButton title={"Comprar"} text={"Olá! Vim através do site e gostaria de saber mais sobre os teclados a venda."}  />
+          <CTAButton
+            title={"Comprar"}
+            text={"Olá! Vim através do site e gostaria de saber mais sobre os teclados a venda."}
+          />
         </div>
       </div>
     </article>
   </section>
 
   <!-- QUANTITY SERVICES -->
-  <section class="section-config bg-ibw">
-    <div class="container">
+  <section class="section-config bg-ibw js">
+    <div class="container js-scroll">
       <div class="row">
         <div class="col-12 mb-5">
           <h1 class="text-white text-center">
@@ -151,7 +184,10 @@ import CTAButton from "@components/CTAButton.astro";
           </h1>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
-          <CTAButton title={"Confira mais produtos"} text={"Olá! Vim através do site e gostaria de saber mais sobre os produtos a venda."}  />
+          <CTAButton
+            title={"Confira mais produtos"}
+            text={"Olá! Vim através do site e gostaria de saber mais sobre os produtos a venda."}
+          />
         </div>
       </div>
     </div>

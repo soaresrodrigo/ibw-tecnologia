@@ -46,6 +46,20 @@ a {
   }
 }
 
+// ANIMATIONS
+.js {
+  .js-scroll {
+    transition: all .3s;
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+
+    &.active {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
 // GLOBAL
 
 .bg-ibw {
@@ -159,7 +173,6 @@ a {
   }
 
 }
-
 
 .section-config {
   position: relative;
