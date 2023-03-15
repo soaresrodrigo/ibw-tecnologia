@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import image from "@astrojs/image";
-import netlify from "@astrojs/netlify/functions";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
 
@@ -22,7 +21,6 @@ export default defineConfig({
       ]
     }),
   ],
-  output: "server",
-  adapter: netlify(),
-
+  output: "static",
+  root: './',
 });
