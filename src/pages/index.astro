@@ -51,7 +51,9 @@ const articles: ITestimonial[] = [
       <div class="text-content">
         <h1>IBW</h1>
         <p>Multi Assistência</p>
-        <a  href="#services" class="btn btn-ibw bg-ibw btn-xl text-uppercase p-3">Conheça os Nossos Serviços</a>
+        <a href="#services" class="btn btn-ibw bg-ibw btn-xl text-uppercase p-3"
+          >Conheça os Nossos Serviços</a
+        >
       </div>
     </header>
   </div>
@@ -95,17 +97,21 @@ const articles: ITestimonial[] = [
     </div>
   </section>
 
-  <section class="section-config bg-blue-dark align-items-center justify-content-around video-presentation">
+  <section
+    class="section-config bg-blue-dark align-items-center justify-content-around video-presentation"
+  >
     <div class="text-white">
       <div class="row">
         <div class="col-12 mb-5">
-          <h1 class="text-center text-uppercase">Veja um pouco como a <mark>IBW</mark> trabalha...</h1>
+          <h1 class="text-center text-uppercase">
+            Veja um pouco como a <mark>IBW</mark> trabalha...
+          </h1>
         </div>
         <div class="container">
           <div class="row mx-auto js">
             <iframe
               class="shadow-light col-lg-3 col-sm-12 mb-5 p-0 js-scroll"
-              src="https://www.youtube.com/embed/0nDdOe7pWlY"
+              src="https://www.youtube.com/embed/bPexdxAGU4w"
               title="YouTube video player"
               height="300px"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -114,7 +120,7 @@ const articles: ITestimonial[] = [
             </iframe>
             <iframe
               class="shadow-light col-lg-3 col-sm-12 mb-5 p-0 js-scroll"
-              src="https://www.youtube.com/embed/0nDdOe7pWlY"
+              src="https://www.youtube.com/embed/B_mzPAM3IS8"
               height="300px"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -124,13 +130,10 @@ const articles: ITestimonial[] = [
             <iframe
               class="shadow-light col-lg-3 col-sm-12 mb-5 p-0 js-scroll"
               height="300px"
-              src="https://www.youtube.com/embed/0nDdOe7pWlY"
+              src="https://www.youtube.com/embed/Fi_f0KZACho"
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
             >
             </iframe>
-
           </div>
         </div>
       </div>
@@ -138,21 +141,25 @@ const articles: ITestimonial[] = [
   </section>
 
   <!-- QUANTITY SERVICES -->
-  <section class="section-config bg-dark">
+  <section class="section-config bg-dark section-quantity-services">
     <div class="container">
       <div class="row text-secondary js">
-        <div class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-white js-scroll">
-          <h2>300+</h2>
+        <div
+          class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-white js-scroll js-counter"
+        >
+          <h2 data-from="0" data-to="1000"></h2>
           <p class="text-white">Clientes atendidos</p>
         </div>
         <div
-          class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-warning js-scroll">
-          <h2>200+</h2>
+          class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-warning js-scroll js-counter"
+        >
+          <h2 data-from="0" data-to="210"></h2>
           <p class="text-warning">Avaliações</p>
         </div>
         <div
-          class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-danger js-scroll">
-          <h2>100+</h2>
+          class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-danger js-scroll js-counter"
+        >
+          <h2 data-from="0" data-to="300"></h2>
           <p class="text-danger">Produtos vendidos</p>
         </div>
       </div>
@@ -213,13 +220,13 @@ const articles: ITestimonial[] = [
             <ul>
               <li>Ligue ou mande mensagem com antecedência</li>
               <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tempore, ullam doloremque debitis architecto ipsa ut molestiae
-                quibusdam quasi voluptate dolorem adipisci laborum numquam
-                incidunt tenetur libero, reiciendis aperiam, temporibus alias.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. .
+                Ao trazer seu notebook ou computador para a manutenção, descreva
+                o problema com o máximo de detalhes possível. Isso ajuda o
+                técnico a entender o que está acontecendo e a encontrar uma
+                solução mais <mark>eficiente</mark>. Tente ser o mais específico
+                possível sobre quando o problema ocorre, quais aplicativos você
+                estava usando, quais mensagens de erro aparecem, entre outros
+                detalhes relevantes.
               </li>
             </ul>
           </dd>
@@ -284,3 +291,41 @@ const articles: ITestimonial[] = [
     }
   }
 </style>
+
+<script>
+  function counterNumber() {
+    const numberCounted = document.querySelectorAll(".js-counter h2");
+    numberCounted.forEach((counter: any) => {
+      const numberFrom = Number(counter.dataset.from);
+      const numberTo = Number(counter.dataset.to);
+
+      let currentNumber = numberFrom;
+      counter.innerHTML = currentNumber.toString() + "+";
+
+      const timeCounter = numberTo > 300 ? 0 : 13;
+
+      const interval = setInterval(() => {
+        if (currentNumber < numberTo) {
+          currentNumber++;
+          counter.innerHTML = currentNumber.toString() + "+";
+        } else {
+          clearInterval(interval);
+        }
+      }, timeCounter);
+    });
+  }
+
+  function scrollAnimated() {
+    const sectionCounter = document.querySelector(".section-quantity-services");
+
+    const myTop = sectionCounter!.getBoundingClientRect().top;
+
+    if(myTop < 600) {
+      counterNumber();
+      window.removeEventListener("scroll", scrollAnimated)
+    }
+
+  }
+
+  window.addEventListener("scroll", scrollAnimated);
+</script>

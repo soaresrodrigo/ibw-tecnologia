@@ -692,7 +692,7 @@ import CTAButton from "./CTAButton.astro";
         document.querySelector(".dropdown-menu");
 
       if (dropdownMenu) {
-        if (dropdownMenu.style.display === "none") {
+        if (dropdownMenu.style.display === "none" || !dropdownMenu.style.display) {
           dropdownMenu.style.display = "block";
         } else {
           dropdownMenu.style.display = "none";

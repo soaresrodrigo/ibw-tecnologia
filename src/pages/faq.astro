@@ -1,7 +1,5 @@
 ---
-import Card from "@components/Card.astro";
 import DefaultPage from "@layouts/DefaultPage.astro";
-import CTAButton from "@components/CTAButton.astro";
 import Testimonial from "@components/Testimonial.astro";
 import type { ITestimonial } from "@components/Testimonial.astro";
 
@@ -42,6 +40,7 @@ const articles: ITestimonial[] = [
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
   },
 ];
+
 ---
 
 <DefaultPage title="FAQ" description="">
@@ -50,10 +49,7 @@ const articles: ITestimonial[] = [
       <div class="text-content">
         <h1>FAQ</h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus,
-          fuga, dolorem modi dolores odit neque blanditiis ex tenetur
-          necessitatibus, cumque facilis. Quam molestiae provident excepturi,
-          mollitia iure laborum architecto dolorum?
+          Confira abaixo as perguntas frequentes sobre nossos serviços de manutenção de notebooks e computadores. Se você ainda tiver dúvidas, não hesite em entrar em contato conosco.
         </p>
       </div>
     </header>
@@ -64,7 +60,7 @@ const articles: ITestimonial[] = [
     <dl class="faq-lista js-accordion js-scroll">
       <dt>Quanto tempo leva para reparar meu notebook ou computador?</dt>
       <dd>
-        O tempo necessário para reparar seu notebook ou computador pode variar dependendo da complexidade do problema e do tipo de serviço necessário. Geralmente, a maioria dos reparos leva entre <b>1 a 5 dias úteis</b>.
+        O tempo necessário para reparar seu notebook ou computador pode variar dependendo da complexidade do problema e do tipo de serviço necessário. Geralmente, a maioria dos reparos levam entre <b>1 a 5 dias úteis</b>.
       </dd>
       <dt>Qual é a política de garantia dos seus produtos?</dt>
       <dd>
