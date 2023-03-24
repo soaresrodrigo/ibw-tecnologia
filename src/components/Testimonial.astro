@@ -19,7 +19,16 @@ const { testimonials } = Astro.props;
       return (
         <article>
           <p>{item.description}</p>
-          <div class="author">{item.author}</div>
+          <div class="author">
+            <div class="availation">
+              <img src="/icons/star.svg" alt="" />
+              <img src="/icons/star.svg" alt="" />
+              <img src="/icons/star.svg" alt="" />
+              <img src="/icons/star.svg" alt="" />
+              <img src="/icons/star.svg" alt="" />
+            </div>
+            {item.author}
+          </div>
         </article>
       );
     })
@@ -96,8 +105,17 @@ const { testimonials } = Astro.props;
       }
 
       .author {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
         font-weight: bold;
         text-align: right !important;
+        font-style: normal;
+
+        img {
+          width: 15px;
+        }
       }
     }
 
