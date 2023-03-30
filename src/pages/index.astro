@@ -4,45 +4,6 @@ import Card from "@components/Card.astro";
 import Companies from "@components/Companies.astro";
 import CTAButton from "@components/CTAButton.astro";
 import Testimonial from "@components/Testimonial.astro";
-import type { ITestimonial } from "@components/Testimonial.astro";
-
-const articles: ITestimonial[] = [
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Carine Britto",
-    description:
-      "Gostaria de agradecer a Wesley pelo atendimento, pela clareza nas explicações, pela agilidade em resolver o problema do meu notebook, não tive boa experiência com outras assistências e com a IBW o atendimento e serviço foi impecável. Nota 10.",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Jamile Mutti",
-    description:
-      "Empresa que presa em conciliar um serviço de extrema qualidade e custo benefício. O proprietário não é um curioso que aprendeu a repetir erros, mas Wesley é um profissional capacitado, ético e competente. Para quem tá cansado de tanto amadorismo e falta de compromisso de tantos que se dizem profissionais na área de automação e tecnologia a IBW é um oásis nesse deserto. Nossa gratidão pelo trabalho executado tão impecavelmente e antes do prazo previsto no orçamento!",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Caio Araújo",
-    description:
-      "Não só um profissional extremamente competente, honesto e transparente, como também um cara muito gente boa. Wesley e seu trabalho são nota 10. Além de extremamente ágil na entrega do equipamento. Recomendo!",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Rodrigo Ferreira",
-    description:
-      "Excelente, mandei meu notebook que tava muito sujo e ele voltou brilhando, limpo por dentro e por fora. Ótima assistência, recomendadíssimo. Não são todos que tem esse cuidado. Parabéns!",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Juli Roberta",
-    description:
-      "Ótimo atendimento, profissional rápido e eficaz!! Pensei que meu computador não tinha mais jeito, foi honesto e me prestou um ótimo serviço!! 100% profissional e ético! Ótima localização, atendimento, meu computador ficou perfeito, com garantia do serviço. Super indico!! Parabéns pelo trabalho!",
-  }
-];
 ---
 
 <DefaultPage title="Multi tecnologia" description="">
@@ -100,11 +61,11 @@ const articles: ITestimonial[] = [
   <section
     class="section-config bg-blue-dark align-items-center justify-content-around video-presentation"
   >
-    <div class="text-white">
+    <div class="text-purple">
       <div class="row">
         <div class="col-12 mb-5">
           <h1 class="text-center text-uppercase">
-            Veja um pouco como a <mark>IBW</mark> trabalha...
+            Veja um pouco como a <mark>IBW</mark> trabalha
           </h1>
         </div>
         <div class="container">
@@ -238,7 +199,7 @@ const articles: ITestimonial[] = [
   <!-- TESTIMONIALS -->
   <section class="section-config bg-ibw js">
     <div class="container js-scroll">
-      <Testimonial testimonials={articles} />
+      <Testimonial />
     </div>
   </section>
   <!-- COMPANY BRANDS -->
@@ -320,11 +281,10 @@ const articles: ITestimonial[] = [
 
     const myTop = sectionCounter!.getBoundingClientRect().top;
 
-    if(myTop < 600) {
+    if (myTop < 600) {
       counterNumber();
-      window.removeEventListener("scroll", scrollAnimated)
+      window.removeEventListener("scroll", scrollAnimated);
     }
-
   }
 
   scrollAnimated();

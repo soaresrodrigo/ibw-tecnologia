@@ -1,46 +1,6 @@
 ---
 import DefaultPage from "@layouts/DefaultPage.astro";
 import Testimonial from "@components/Testimonial.astro";
-import type { ITestimonial } from "@components/Testimonial.astro";
-
-const articles: ITestimonial[] = [
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Rodrigo Soares",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Laís Santana",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Danilo Ferreira",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Jessica Garcia",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Vinicius Silva",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-];
-
 ---
 
 <DefaultPage title="FAQ" description="">
@@ -141,7 +101,7 @@ const articles: ITestimonial[] = [
   <!--  TESTIMONIALS -->
   <section class="section-config bg-ibw js">
     <div class="container js-scroll">
-      <Testimonial testimonials={articles} />
+      <Testimonial />
     </div>
   </section>
 </DefaultPage>
