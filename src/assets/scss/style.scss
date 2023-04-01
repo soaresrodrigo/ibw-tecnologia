@@ -75,7 +75,7 @@ a {
 }
 
 .bg-logo {
-  background-image: url('/images/logo-transparent.png');
+  background-image: url('/images/logo-transparent.webp');
   background-repeat: repeat;
   background-size: 150px 100px;
   background-position: 0 -10px;
@@ -84,15 +84,14 @@ a {
 }
 
 .bg-about {
-  // background-image: url('/images/about.webp');
-  background-image: url('/images/about.jpg');
+  background-image: url('/images/about.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 
 .bg-masterhead {
-  background-image: url('/images/intro-background.jpg');
+  background-image: url('/images/intro-background.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -106,7 +105,7 @@ a {
 }
 
 .bg-maintenance {
-  background-image: url('/images/maintenance.jpg');
+  background-image: url('/images/maintenance.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -120,7 +119,7 @@ a {
 }
 
 .bg-shop {
-  background-image: url('/images/shop.jpg');
+  background-image: url('/images/shop.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -128,7 +127,7 @@ a {
 
 .bg-blur-dark {
   background-color: rgba(34, 34, 34, 0.8);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
 }
 
 .text-ibw {
