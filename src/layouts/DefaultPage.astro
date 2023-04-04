@@ -21,8 +21,10 @@ const { title, description, image } = Astro.props as Props;
     <!-- Animação do scroll -->
     <script>
       const sections = document.querySelectorAll(".js-scroll");
+
+      sections[0].classList.add("active");
       if (sections.length) {
-        const halfWindow = window.innerHeight * 0.91;
+        const halfWindow = window.innerHeight * 0.7;
 
         function animaScroll() {
           sections.forEach((section) => {
