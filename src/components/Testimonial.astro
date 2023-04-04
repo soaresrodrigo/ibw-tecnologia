@@ -13,29 +13,25 @@ const testimonials: ITestimonial[] = [
       "Excelente, mandei meu notebook que tava muito sujo por dentro e ele voltou brilhando, limpo por dentro e por fora. Ótima assistência, recomendadíssimo. Não são todos que tem esse cuidado. Parabéns!",
   },
   {
-    photoUrl:
-      "/images/personas/carine.webp",
+    photoUrl: "/images/personas/carine.webp",
     author: "Carine Britto",
     description:
       "Gostaria de agradecer a Wesley pelo atendimento, pela clareza nas explicações, pela agilidade em resolver o problema do meu notebook, não tive boa experiência com outras assistências e com a IBW o atendimento e serviço foi impecável. Nota 10.",
   },
   {
-    photoUrl:
-      "/images/personas/jamile.webp",
+    photoUrl: "/images/personas/jamile.webp",
     author: "Jamile Mutti",
     description:
       "Empresa que presa em conciliar um serviço de extrema qualidade e custo benefício. O proprietário não é um curioso que aprendeu a repetir erros, mas Wesley é um profissional capacitado, ético e competente. Para quem tá cansado de tanto amadorismo e falta de compromisso de tantos que se dizem profissionais na área de automação e tecnologia a IBW é um oásis nesse deserto. Nossa gratidão pelo trabalho executado tão impecavelmente e antes do prazo previsto no orçamento!",
   },
   {
-    photoUrl:
-      "/images/personas/caio.webp",
+    photoUrl: "/images/personas/caio.webp",
     author: "Caio Araújo",
     description:
       "Não só um profissional extremamente competente, honesto e transparente, como também um cara muito gente boa. Wesley e seu trabalho são nota 10. Além de extremamente ágil na entrega do equipamento. Recomendo!",
   },
   {
-    photoUrl:
-      "/images/personas/sidinei.webp",
+    photoUrl: "/images/personas/sidinei.webp",
     author: "Sidinei Antunes",
     description:
       "Atendimento cordial, solução rápida, ótimos preços e garantia do serviço. Recomendo muito. Extremamente confiável e competente!",
@@ -80,14 +76,13 @@ const testimonials: ITestimonial[] = [
 
 <style lang="scss">
   .js-tabmenu li {
-    transform: scale(1);
     transition: 0.2s;
     opacity: 0.5;
   }
 
   .js-tabmenu li.active {
     opacity: 1;
-    transform: scale(1.3);
+
     img {
       border-color: rgba(0, 0, 0, 0.1) !important;
     }
@@ -152,13 +147,14 @@ const testimonials: ITestimonial[] = [
 
     .avatars {
       display: flex;
+      margin: auto;
       justify-content: center;
       gap: 100px;
       padding: 0;
       list-style: none;
 
       .image {
-        overflow: hidden;
+        // overflow: hidden;
         img {
           width: 80px;
           height: 80px;
@@ -184,10 +180,13 @@ const testimonials: ITestimonial[] = [
           text-align: right !important;
         }
       }
-
       .avatars {
+        display: flex;
+        padding: 0 0%;
+        justify-content: flex-start;
+        width: 100%;
         overflow-x: scroll;
-        gap: 30px;
+        gap: 5px;
         height: 150px;
         align-items: center;
       }
