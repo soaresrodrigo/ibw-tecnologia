@@ -196,11 +196,9 @@ const testimonials: ITestimonial[] = [
 <script>
   const tabMenu = document.querySelectorAll(".js-tabmenu li");
   const tabContent = document.querySelectorAll(".js-tabcontent article");
-
   const randomSelected = Math.floor(Math.random() * tabContent.length);
-  console.log(randomSelected);
-
   const classActive = "active";
+
   tabContent[randomSelected].classList.add(classActive);
   tabMenu[randomSelected].classList.add(classActive);
 
