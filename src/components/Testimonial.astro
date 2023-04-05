@@ -154,7 +154,6 @@ const testimonials: ITestimonial[] = [
       list-style: none;
 
       .image {
-        // overflow: hidden;
         img {
           width: 80px;
           height: 80px;
@@ -169,6 +168,7 @@ const testimonials: ITestimonial[] = [
 
   @media (max-width: 1000px) {
     .testimonial {
+      margin-bottom: 10%;
       article {
         width: 100%;
         p {
@@ -181,11 +181,10 @@ const testimonials: ITestimonial[] = [
         }
       }
       .avatars {
-        display: flex;
+        flex-wrap: wrap;
         padding: 0 0%;
-        justify-content: flex-start;
+        justify-content: center;
         width: 100%;
-        overflow-x: scroll;
         gap: 5px;
         height: 150px;
         align-items: center;
@@ -198,9 +197,12 @@ const testimonials: ITestimonial[] = [
   const tabMenu = document.querySelectorAll(".js-tabmenu li");
   const tabContent = document.querySelectorAll(".js-tabcontent article");
 
+  const randomSelected = Math.floor(Math.random() * tabContent.length);
+  console.log(randomSelected);
+
   const classActive = "active";
-  tabContent[0].classList.add(classActive);
-  tabMenu[0].classList.add(classActive);
+  tabContent[randomSelected].classList.add(classActive);
+  tabMenu[randomSelected].classList.add(classActive);
 
   if (tabMenu.length && tabContent.length) {
     function activeTab(index: number) {
