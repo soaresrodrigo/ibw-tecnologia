@@ -132,7 +132,6 @@ const currentYear = new Date().getFullYear();
     transform: scale(1);
     transition: 0.2s;
     opacity: 0.3;
-
     color: white;
 
     &:hover {
@@ -164,6 +163,11 @@ const currentYear = new Date().getFullYear();
       border-width: 5px 5px 5px 0;
       border-style: solid;
       border-color: transparent #000 transparent transparent;
+    }
+
+    @media (max-width: 767px) {
+      bottom: 1em;
+      right: 1em;
     }
   }
   .footer-dark {
