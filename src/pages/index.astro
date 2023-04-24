@@ -108,7 +108,7 @@ import Testimonial from "@components/Testimonial.astro";
         <div
           class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-white js-scroll js-counter"
         >
-          <h2 data-from="0" data-to="1000" class="h1"></h2>
+          <h2 data-from="0" data-to="2000" class="h1"></h2>
           <p class="text-white">Clientes atendidos</p>
         </div>
         <div
@@ -120,7 +120,7 @@ import Testimonial from "@components/Testimonial.astro";
         <div
           class="col-lg-3 col-sm-12 mb-5 m-1 p-3 mx-auto shadow-light border-top border-danger js-scroll js-counter"
         >
-          <h2 data-from="0" data-to="300" class="h1"></h2>
+          <h2 data-from="0" data-to="500" class="h1"></h2>
           <p class="text-danger">Produtos vendidos</p>
         </div>
       </div>
@@ -260,10 +260,9 @@ import Testimonial from "@components/Testimonial.astro";
       const numberFrom = Number(counter.dataset.from);
       const numberTo = Number(counter.dataset.to);
 
-      let currentNumber = numberFrom;
+      let currentNumber = numberTo > 1500 ? 1500 : numberFrom;
       counter.innerHTML = currentNumber.toString() + "+";
 
-      const timeCounter = numberTo > 300 ? 0 : 13;
 
       const interval = setInterval(() => {
         if (currentNumber < numberTo) {
@@ -272,7 +271,7 @@ import Testimonial from "@components/Testimonial.astro";
         } else {
           clearInterval(interval);
         }
-      }, timeCounter);
+      }, 0);
     });
   }
 
