@@ -109,6 +109,7 @@
     }
     position: relative;
     overflow: hidden;
+
     .js-scroll {
       display: flex;
       animation: scroll 15s linear infinite;
@@ -125,6 +126,14 @@
         &:last-child {
           margin-right: 0;
         }
+      }
+
+    }
+    @media (max-width: 768px) {
+      width: 2000px;
+
+      .js-scroll {
+        gap: 0;
       }
     }
   }
