@@ -136,20 +136,22 @@ import DefaultPage from "@layouts/DefaultPage.astro";
     </article>
   </section>
   <section class="bg-blue-dark container-fluid space js">
-    <h1 class="h3 text-center container font-weight-bold text-white">
-      Empresas que já foram atendidas por nossa equipe.
-    </h1>
-      <ul class="companies">
-        <li><img src="/images/business/california_coffee.webp" width="100" height="106" alt="" /></li>
-        <li><img src="/images/business/grupo_controler.webp" width="100" height="99" alt="" /></li>
-        <li><img src="/images/business/icecreamy.webp" width="100" height="63" alt="" /></li>
-        <li><img src="/images/business/interfort.webp" width="100" height="52" alt="" /></li>
-        <li><img src="/images/business/jkl.webp" width="100" height="57" alt="" /></li>
-        <li><img src="/images/business/longevite.webp" width="200" height="47" alt="" /></li>
-        <li><img src="/images/business/senhor_smart.webp" width="150" height="112" alt="" /></li>
-        <li><img src="/images/business/sonho_dos_pes.webp" width="200" height="37" alt="" /></li>
-        <li><img src="/images/business/sost_comercio.webp" width="120" height="44" alt="" /></li>
-      </ul>
+    <div class="row mx-auto">
+      <h1 class="h3 text-center container font-weight-bold text-white mb-5">
+        Empresas atendidas por nossa equipe
+      </h1>
+        <ul class="companies">
+          <li><img src="/images/business/california_coffee.webp" width="100" height="106" alt="" /></li>
+          <li><img src="/images/business/grupo_controler.webp" width="100" height="99" alt="" /></li>
+          <li><img src="/images/business/icecreamy.webp" width="100" height="63" alt="" /></li>
+          <li><img src="/images/business/interfort.webp" width="100" height="52" alt="" /></li>
+          <li><img src="/images/business/jkl.webp" width="100" height="57" alt="" /></li>
+          <li><img src="/images/business/longevite.webp" width="200" height="47" alt="" /></li>
+          <li><img src="/images/business/senhor_smart.webp" width="150" height="112" alt="" /></li>
+          <li><img src="/images/business/sonho_dos_pes.webp" width="200" height="37" alt="" /></li>
+          <li><img src="/images/business/sost_comercio.webp" width="120" height="44" alt="" /></li>
+        </ul>
+    </div>
   </section>
 </DefaultPage>
 
@@ -159,7 +161,7 @@ import DefaultPage from "@layouts/DefaultPage.astro";
     flex-direction: row;
     gap: 50px 100px;
     flex-wrap: wrap;
-    width: 800px;
+    max-width: 800px;
     margin: auto;
     align-items: center;
     justify-content: center;
