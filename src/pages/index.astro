@@ -4,14 +4,17 @@ import Card from "@components/Card.astro";
 import Companies from "@components/Companies.astro";
 import CTAButton from "@components/CTAButton.astro";
 import Testimonial from "@components/Testimonial.astro";
+
+const title = import.meta.env.SITE_TITLE;
+const description = import.meta.env.SITE_DESCRIPTION;
 ---
 
-<DefaultPage title="Multi tecnologia" description="">
+<DefaultPage title="Multi tecnologia" description={description}>
   <div class="bg-masterhead divider">
     <header class="bg-blur-dark header-config">
       <div class="text-content">
-        <h1>IBW TECNOLOGIA</h1>
-        <p>Multi Assistência</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
         <a href="#services" class="btn btn-ibw bg-ibw btn-xl text-uppercase p-3"
           >Conheça os Nossos Serviços</a
         >
