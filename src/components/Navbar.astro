@@ -6,8 +6,7 @@ import CTAButton from "./CTAButton.astro";
 <div>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="/"
-        ><img src="/images/logo.png" alt="..." width="100" /></a
+      <a class="navbar-brand" href="/"><img src="/images/logo.webp" alt="..." width="100" /></a
       >
       <button
         class="navbar-toggler"
@@ -22,7 +21,7 @@ import CTAButton from "./CTAButton.astro";
         <i class="fas fa-bars ms-1"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+        <ul class="navbar-nav text-uppercase ms-auto px-lg-5 px-sm-1">
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -692,7 +691,7 @@ import CTAButton from "./CTAButton.astro";
         document.querySelector(".dropdown-menu");
 
       if (dropdownMenu) {
-        if (dropdownMenu.style.display === "none") {
+        if (dropdownMenu.style.display === "none" || !dropdownMenu.style.display) {
           dropdownMenu.style.display = "block";
         } else {
           dropdownMenu.style.display = "none";

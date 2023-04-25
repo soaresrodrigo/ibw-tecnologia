@@ -1,15 +1,42 @@
 ---
-export interface ITestimonial {
+interface ITestimonial {
   photoUrl: string;
   author: string;
   description: string;
 }
 
-interface Props {
-  testimonials: ITestimonial[];
-}
-
-const { testimonials } = Astro.props;
+const testimonials: ITestimonial[] = [
+  {
+    photoUrl: "/images/personas/rodrigo.webp",
+    author: "Rodrigo Ferreira",
+    description:
+      "Excelente, mandei meu notebook que tava muito sujo por dentro e ele voltou brilhando, limpo por dentro e por fora. Ótima assistência, recomendadíssimo. Não são todos que tem esse cuidado. Parabéns!",
+  },
+  {
+    photoUrl: "/images/personas/carine.webp",
+    author: "Carine Britto",
+    description:
+      "Gostaria de agradecer a Wesley pelo atendimento, pela clareza nas explicações, pela agilidade em resolver o problema do meu notebook, não tive boa experiência com outras assistências e com a IBW o atendimento e serviço foi impecável. Nota 10.",
+  },
+  {
+    photoUrl: "/images/personas/jamile.webp",
+    author: "Jamile Mutti",
+    description:
+      "Empresa que presa em conciliar um serviço de extrema qualidade e custo benefício. O proprietário não é um curioso que aprendeu a repetir erros, mas Wesley é um profissional capacitado, ético e competente. Para quem tá cansado de tanto amadorismo e falta de compromisso de tantos que se dizem profissionais na área de automação e tecnologia a IBW é um oásis nesse deserto. Nossa gratidão pelo trabalho executado tão impecavelmente e antes do prazo previsto no orçamento!",
+  },
+  {
+    photoUrl: "/images/personas/caio.webp",
+    author: "Caio Araújo",
+    description:
+      "Não só um profissional extremamente competente, honesto e transparente, como também um cara muito gente boa. Wesley e seu trabalho são nota 10. Além de extremamente ágil na entrega do equipamento. Recomendo!",
+  },
+  {
+    photoUrl: "/images/personas/sidinei.webp",
+    author: "Sidinei Antunes",
+    description:
+      "Atendimento cordial, solução rápida, ótimos preços e garantia do serviço. Recomendo muito. Extremamente confiável e competente!",
+  },
+];
 ---
 
 <div class="testimonial js-tabcontent">
@@ -19,7 +46,16 @@ const { testimonials } = Astro.props;
       return (
         <article>
           <p>{item.description}</p>
-          <div class="author">{item.author}</div>
+          <div class="author">
+            <div class="availation">
+              <img src="/icons/star.svg" alt="" />
+              <img src="/icons/star.svg" alt="" />
+              <img src="/icons/star.svg" alt="" />
+              <img src="/icons/star.svg" alt="" />
+              <img src="/icons/star.svg" alt="" />
+            </div>
+            {item.author}
+          </div>
         </article>
       );
     })
@@ -29,7 +65,7 @@ const { testimonials } = Astro.props;
     {
       testimonials.map((item) => {
         return (
-          <li>
+          <li class="image">
             <img src={item.photoUrl} alt={item.author} />
           </li>
         );
@@ -40,16 +76,15 @@ const { testimonials } = Astro.props;
 
 <style lang="scss">
   .js-tabmenu li {
-    transform: scale(1);
     transition: 0.2s;
     opacity: 0.5;
   }
 
   .js-tabmenu li.active {
     opacity: 1;
-    transform: scale(1.3);
+
     img {
-      box-shadow: 10px 10px 19px -7px rgba(0, 0, 0, 0.39);
+      border-color: rgba(0, 0, 0, 0.1) !important;
     }
   }
 
@@ -96,62 +131,76 @@ const { testimonials } = Astro.props;
       }
 
       .author {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
         font-weight: bold;
         text-align: right !important;
+        font-style: normal;
+
+        img {
+          width: 15px;
+        }
       }
     }
 
     .avatars {
       display: flex;
+      margin: auto;
       justify-content: center;
       gap: 100px;
       padding: 0;
       list-style: none;
 
-      img {
-        width: 60px;
-        border-radius: 50%;
-        cursor: pointer;
+      .image {
+        img {
+          width: 80px;
+          height: 80px;
+          object-fit: cover;
+          border-radius: 50%;
+          cursor: pointer;
+          border: 5px solid transparent;
+        }
       }
     }
   }
 
   @media (max-width: 1000px) {
-
     .testimonial {
+      margin-bottom: 10%;
+      article {
+        width: 100%;
+        p {
+          text-align: left;
+        }
 
-
-    article {
-      width: 100%;
-      p {
-        text-align: left;
+        .author {
+          font-weight: bold;
+          text-align: right !important;
+        }
       }
-
-      .author {
-        font-weight: bold;
-        text-align: right !important;
+      .avatars {
+        flex-wrap: wrap;
+        padding: 0 0%;
+        justify-content: center;
+        width: 100%;
+        gap: 5px;
+        height: 150px;
+        align-items: center;
       }
-    }
-
-    .avatars {
-      overflow-x: scroll;
-      gap: 30px;
-      height: 150px;
-      align-items: center;
-
     }
   }
-}
-
 </style>
 
 <script>
   const tabMenu = document.querySelectorAll(".js-tabmenu li");
   const tabContent = document.querySelectorAll(".js-tabcontent article");
-
+  const randomSelected = Math.floor(Math.random() * tabContent.length);
   const classActive = "active";
-  tabContent[0].classList.add(classActive);
-  tabMenu[0].classList.add(classActive);
+
+  tabContent[randomSelected].classList.add(classActive);
+  tabMenu[randomSelected].classList.add(classActive);
 
   if (tabMenu.length && tabContent.length) {
     function activeTab(index: number) {

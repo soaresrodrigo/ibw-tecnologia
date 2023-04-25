@@ -74,25 +74,15 @@ a {
   background-color: #30336b;
 }
 
-.bg-logo {
-  background-image: url('/images/logo-transparent.png');
-  background-repeat: repeat;
-  background-size: 150px 100px;
-  background-position: 0 -10px;
-  background-color: #eeeef2;
-  border: 10px solid #fff;
-}
-
 .bg-about {
-  // background-image: url('/images/about.webp');
-  background-image: url('/images/about.jpg');
+  background-image: url('/images/about.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 
 .bg-masterhead {
-  background-image: url('/images/intro-background.jpg');
+  background-image: url('/images/intro-background.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -106,7 +96,7 @@ a {
 }
 
 .bg-maintenance {
-  background-image: url('/images/maintenance.jpg');
+  background-image: url('/images/maintenance.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -120,7 +110,7 @@ a {
 }
 
 .bg-shop {
-  background-image: url('/images/shop.jpg');
+  background-image: url('/images/shop.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -128,7 +118,7 @@ a {
 
 .bg-blur-dark {
   background-color: rgba(34, 34, 34, 0.8);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
 }
 
 .text-ibw {
@@ -137,6 +127,10 @@ a {
 
 .text-blue-dark {
   color: #30336b;
+}
+
+.text-purple {
+  color: #9499F8;
 }
 
 .bg-purple {

@@ -1,39 +1,148 @@
 <section class="brands section-config bg-white js">
   <ul class="container-fluid js-scroll">
-    <li><img src="/images/brands/avell.png" src="avell" width="100" /></li>
-    <li><img src="/images/brands/vaio.png" src="vaio" width="100" /></li>
+    <li><img src="/images/brands/dell.webp" src="dell" alt="" width="70" /></li>
     <li>
-      <img src="/images/brands/lenovo.png" src="lenovo" width="150" />
+      <img src="/images/brands/lenovo.webp" src="lenovo" alt="" width="150" />
     </li>
     <li>
-      <img src="/images/brands/samsung.png" src="samsung" width="100" />
+      <img src="/images/brands/samsung.webp" src="samsung" alt="" width="100" />
     </li>
-    <li><img src="/images/brands/lg.png" src="lg" width="100" /></li>
-    <li><img src="/images/brands/dell.png" src="dell" width="70" /></li>
-    <li><img src="/images/brands/asus.png" src="asus" width="100" /></li>
-    <li><img src="/images/brands/hp.png" src="hp" width="100" /></li>
     <li>
-      <img src="/images/brands/positivo.png" src="positivo" width="100" />
+      <img src="/images/brands/asus.webp" src="asus" alt="" width="100" />
+    </li>
+    <li>
+      <img
+        src="/images/brands/avell.webp"
+        class="opacity"
+        src="avell"
+        alt=""
+        width="100"
+      />
+    </li>
+    <li>
+      <img src="/images/brands/vaio.webp" src="vaio" alt="" width="100" />
+    </li>
+    <li><img src="/images/brands/lg.webp" src="lg" alt="" width="100" /></li>
+    <li><img src="/images/brands/hp.webp" src="hp" alt="" width="100" /></li>
+    <li>
+      <img
+        src="/images/brands/positivo.webp"
+        class="opacity"
+        src="positivo"
+        alt=""
+        width="100"
+      />
+    </li>
+    <li><img src="/images/brands/dell.webp" src="dell" alt="" width="70" /></li>
+    <li>
+      <img src="/images/brands/lenovo.webp" src="lenovo" alt="" width="150" />
+    </li>
+    <li>
+      <img src="/images/brands/samsung.webp" src="samsung" alt="" width="100" />
+    </li>
+    <li>
+      <img src="/images/brands/asus.webp" src="asus" alt="" width="100" />
+    </li>
+    <li>
+      <img
+        src="/images/brands/avell.webp"
+        class="opacity"
+        src="avell"
+        alt=""
+        width="100"
+      />
+    </li>
+    <li>
+      <img src="/images/brands/vaio.webp" src="vaio" alt="" width="100" />
+    </li>
+    <li><img src="/images/brands/lg.webp" src="lg" alt="" width="100" /></li>
+    <li><img src="/images/brands/hp.webp" src="hp" alt="" width="100" /></li>
+    <li>
+      <img
+        src="/images/brands/positivo.webp"
+        class="opacity"
+        src="positivo"
+        alt=""
+        width="100"
+      />
+    </li>
+    <li><img src="/images/brands/dell.webp" src="dell" alt="" width="70" /></li>
+    <li>
+      <img src="/images/brands/lenovo.webp" src="lenovo" alt="" width="150" />
+    </li>
+    <li>
+      <img src="/images/brands/samsung.webp" src="samsung" alt="" width="100" />
+    </li>
+    <li>
+      <img src="/images/brands/asus.webp" src="asus" alt="" width="100" />
+    </li>
+    <li>
+      <img
+        src="/images/brands/avell.webp"
+        class="opacity"
+        src="avell"
+        alt=""
+        width="100"
+      />
+    </li>
+    <li>
+      <img src="/images/brands/vaio.webp" src="vaio" alt="" width="100" />
+    </li>
+    <li><img src="/images/brands/lg.webp" src="lg" alt="" width="100" /></li>
+    <li><img src="/images/brands/hp.webp" src="hp" alt="" width="100" /></li>
+    <li>
+      <img
+        src="/images/brands/positivo.webp"
+        class="opacity"
+        src="positivo"
+        alt=""
+        width="100"
+      />
     </li>
   </ul>
 </section>
 
-
 <style lang="scss">
   .brands {
-    ul {
-      display: inline-flex;
+    .opacity {
+      opacity: 0.4;
+    }
+    position: relative;
+    overflow: hidden;
+
+    .js-scroll {
+      display: flex;
+      animation: scroll 15s linear infinite;
       align-items: center;
       gap: 5%;
       justify-items: center;
-      overflow-x: auto;
-
       li {
         list-style: none;
+        margin-right: 60px;
         img {
+          display: block;
           filter: grayscale(1);
         }
+        &:last-child {
+          margin-right: 0;
+        }
       }
+
+    }
+    @media (max-width: 768px) {
+      .js-scroll {
+        width: 2000px;
+        gap: 0;
+      }
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
     }
   }
 </style>

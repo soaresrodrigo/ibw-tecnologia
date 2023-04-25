@@ -1,47 +1,6 @@
 ---
-import Card from "@components/Card.astro";
 import DefaultPage from "@layouts/DefaultPage.astro";
-import CTAButton from "@components/CTAButton.astro";
 import Testimonial from "@components/Testimonial.astro";
-import type { ITestimonial } from "@components/Testimonial.astro";
-
-const articles: ITestimonial[] = [
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Rodrigo Soares",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Laís Santana",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Danilo Ferreira",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Jessica Garcia",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-  {
-    photoUrl:
-      "https://web.archive.org/web/20230111031759im_/https://thispersondoesnotexist.com/image",
-    author: "Vinicius Silva",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quo, ad iusto corporis neque tempora voluptate perspiciatis adipisci laboriosam. Deleniti temporibus iure voluptates quae modi laboriosam quibusdam amet reprehenderit esse.",
-  },
-];
 ---
 
 <DefaultPage title="FAQ" description="">
@@ -50,10 +9,9 @@ const articles: ITestimonial[] = [
       <div class="text-content">
         <h1>FAQ</h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus,
-          fuga, dolorem modi dolores odit neque blanditiis ex tenetur
-          necessitatibus, cumque facilis. Quam molestiae provident excepturi,
-          mollitia iure laborum architecto dolorum?
+          Confira abaixo as perguntas frequentes sobre nossos serviços de
+          manutenção de notebooks e computadores. Se você ainda tiver dúvidas,
+          não hesite em entrar em contato conosco.
         </p>
       </div>
     </header>
@@ -61,91 +19,117 @@ const articles: ITestimonial[] = [
 
   <!-- Todas as perguntas -->
   <section class="js container faq p-5" id="faq">
-    <dl class="faq-lista js-accordion js-scroll">
-      <dt>Quanto tempo leva para reparar meu notebook ou computador?</dt>
-      <dd>
-        O tempo necessário para reparar seu notebook ou computador pode variar dependendo da complexidade do problema e do tipo de serviço necessário. Geralmente, a maioria dos reparos leva entre <b>1 a 5 dias úteis</b>.
-      </dd>
-      <dt>Qual é a política de garantia dos seus produtos?</dt>
-      <dd>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
-        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
-        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
-        magni?
-      </dd>
-      <dt>
-        Vocês realizam reparos em computadores e notebooks de outras marcas?
-      </dt>
-      <dd>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
-        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
-        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
-        magni?.
-      </dd>
-      <dt>Quais são os tipos de acessórios que vocês vendem?</dt>
-      <dd>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
-        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
-        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
-        magni?.
-      </dd>
-      <dt>Vocês oferecem soluções de segurança cibernética para empresas?</dt>
-      <dd>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
-        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
-        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
-        magni?.
-      </dd>
-      <dt>
-        Quais são as opções de pagamento disponíveis para os produtos e
-        serviços?
-      </dt>
-      <dd>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
-        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
-        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
-        magni?.
-      </dd>
-      <dt>Quanto tempo leva para consertar um computador ou notebook?</dt>
-      <dd>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
-        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
-        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
-        magni?.
-      </dd>
-      <dt>Vocês oferecem serviços de backup e recuperação de dados?</dt>
-      <dd>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
-        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
-        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
-        magni?.
-      </dd>
-      <dt>
-        Como faço para solicitar uma cotação para uma solução personalizada para
-        a minha empresa?
-      </dt>
-      <dd>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
-        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
-        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
-        magni?.
-      </dd>
-      <dt>
-        Vocês oferecem treinamento e suporte técnico para as soluções vendidas?
-      </dt>
-      <dd>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
-        rerum non possimus nulla ducimus quod ratione commodi esse earum facilis
-        quas amet sed, quis blanditiis voluptatum corporis labore distinctio
-        magni?.
-      </dd>
+    <dl class="faq-lista js-accordion">
+      <div class="js-scroll">
+        <dt>Quanto tempo leva para reparar meu notebook ou computador?</dt>
+        <dd>
+          O tempo necessário para reparar seu notebook ou computador pode variar
+          dependendo da complexidade do problema e do tipo de serviço
+          necessário. Geralmente, a maioria dos reparos demoram entre <b
+            >1 a 5 dias úteis</b
+          >, informaremos o tempo assim que o orçamento for repassado para você.
+        </dd>
+      </div>
+
+      <div class="js-scroll">
+        <dt>Posso solicitar um orçamento antes de contratar o serviço?</dt>
+        <dd>
+          Para garantir a precisão do orçamento e identificar o problema do seu
+          equipamento, precisamos que você traga o mesmo para análise em nossa
+          assistência. Somente assim, poderemos fornecer um orçamento adequado e
+          justo para você. Estamos à disposição para esclarecer qualquer dúvida
+          que você possa ter.
+        </dd>
+      </div>
+
+      <div class="js-scroll">
+        <dt>
+          A assistência técnica oferece garantia para os serviços prestados?
+        </dt>
+        <dd>
+          Sim, oferecemos garantia de 90 dias para os serviços prestados, De
+          acordo com o Código de Defesa do Consumidor(CDC). Exceto em algumas
+          ocasiões: programas instalados indevidamente, vírus, alterações, não é
+          coberto pela garantia. Entre em contato conosco para mais informações
+          sobre nossa política de garantia.
+        </dd>
+      </div>
+
+      <div class="js-scroll">
+        <dt>É possível fazer um contrato de manutenção preventiva?</dt>
+        <dd>
+          Sim, oferecemos contratos de manutenção preventiva para empresas ou
+          usuários que precisam de serviços recorrentes.
+        </dd>
+      </div>
+
+      <div class="js-scroll">
+        <dt>Quais métodos de pagamento a loja aceita?</dt>
+        <dd>
+          Aceitamos diversas formas de pagamento. Sendo elas, cartões de crédito
+          e débito, transferência bancária, pix e dinheiro em espécie.
+        </dd>
+      </div>
+
+      <div class="js-scroll">
+        <dt>
+          Posso fazer um orçamento gratuito para o reparo do meu equipamento?
+        </dt>
+        <dd>
+          Sim, não cobramos pelo orçamento, mas para equipamentos que precisam
+          ser abertos e analisados para identificar o problema, é cobrada uma
+          taxa de diagnóstico no valor de R$50,00 para cobrir nossos custos,
+          tempo, insumos e esforços na identificação do problema. <b
+            >A taxa de diagnóstico não é cobrada</b
+          >, caso o orçamento seja aprovado e o serviço de reparo seja
+          realizado.
+        </dd>
+      </div>
+
+      <div class="js-scroll">
+        <dt>Sou de outra cidade, como faço para enviar meu equipamento?</dt>
+        <dd>
+          Por favor, entre em contato com a nossa empresa para obter instruções
+          sobre como enviar seu equipamento para reparo, estamos à disposição
+          para ajudá-lo. Nossos contatos para suporte:
+          <br />
+          E-mail: <a
+            href="mailto:suporte@ibwtecnologia.com.br"
+            aria-label="Email"
+            title="Email">suporte@ibwtecnologia.com.br</a
+          >
+          <br />
+          Whatsapp: <a
+            href="https://api.whatsapp.com/send?phone=+5571987465932&text=Olá!%20Vim%20através%20do%20site%20e%20gostaria%20de%20tirar%20algumas%20dúvidas%20sobre%20seus%20serviços!"
+            target="_blank">(71) 9 8746-5932</a
+          >
+        </dd>
+      </div>
+
+      <div class="js-scroll">
+        <dt>
+          Como faço para solicitar uma cotação de Solução em T.I para a minha
+          empresa?
+        </dt>
+        <dd>
+          Basta entrar em contato com a nossa equipe de vendas. Você pode fazer
+          isso enviando um e-mail para <a
+            href="mailto:contato@ibwtecnologia.com.br"
+            aria-label="Email"
+            title="Email">contato@ibwtecnologia.com.br</a
+          > ou através do nosso Whatsapp <a
+            href="https://api.whatsapp.com/send?phone=+5571987465932&text=Olá!%20Vim%20através%20do%20site%20e%20gostaria%20de%20tirar%20algumas%20dúvidas%20sobre%20seus%20serviços!"
+            target="_blank">(71) 9 8746-5932</a
+          >.
+        </dd>
+      </div>
     </dl>
   </section>
 
   <!--  TESTIMONIALS -->
   <section class="section-config bg-ibw js">
     <div class="container js-scroll">
-      <Testimonial testimonials={articles} />
+      <Testimonial />
     </div>
   </section>
 </DefaultPage>
@@ -180,6 +164,7 @@ const articles: ITestimonial[] = [
       }
     }
     dd {
+      display: block;
       margin-bottom: 0.5rem;
       margin-left: 30px;
     }
@@ -199,14 +184,14 @@ const articles: ITestimonial[] = [
         margin-left: 10px;
       }
     }
-    dt.active {
+    dt.opened {
       &::after {
         content: "⤴";
       }
     }
-    dd.active {
+    dd.opened {
       display: block;
-      animation: slideDown .5s both;
+      animation: slideDown 0.5s backwards;
     }
   }
 </style>
@@ -214,7 +199,7 @@ const articles: ITestimonial[] = [
 <script>
   const accordionList = document.querySelectorAll(".js-accordion dt");
 
-  const classActive = "active";
+  const classActive = "opened";
   if (accordionList.length) {
     accordionList[0].classList.add(classActive);
     accordionList[0].nextElementSibling?.classList.add(classActive);
