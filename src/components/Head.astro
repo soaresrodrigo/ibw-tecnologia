@@ -14,7 +14,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description } = Astro.props;
 
 const completeTitle = import.meta.env.SITE_TITLE + " - " + title;
-const loadedImage = '/images/favicon.webp';
+const loadedImage = "/images/favicon.webp";
 ---
 
 <!-- Global Metadata -->
@@ -45,6 +45,9 @@ const loadedImage = '/images/favicon.webp';
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={loadedImage} /> -->
 
+<!-- Others -->
+<meta name="facebook-domain-verification" content="ebwuyns669pnu8gjxej0uf4hyr18r3" />
+
 <!-- Google tag (gtag.js) -->
 <script
   type="text/partytown"
@@ -60,3 +63,39 @@ const loadedImage = '/images/favicon.webp';
 
   gtag("config", "G-LEP3ZW04J0");
 </script>
+
+<!-- Meta Pixel Code Facebook -->
+<script type="text/partytown">
+  !(function (f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = "2.0";
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = !0;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s);
+  })(
+    window,
+    document,
+    "script",
+    "https://connect.facebook.net/en_US/fbevents.js"
+  );
+  fbq("init", "754817033352932");
+  fbq("track", "PageView");
+</script>
+<noscript
+  ><img
+    height="1"
+    width="1"
+    style="display:none"
+    src="https://www.facebook.com/tr?id=754817033352932&ev=PageView&noscript=1"
+  /></noscript
+>
+<!-- End Meta Pixel Code -->
