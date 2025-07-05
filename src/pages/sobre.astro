@@ -9,7 +9,7 @@ import Testimonial from "@components/Testimonial.astro";
   <div class="bg-about divider">
     <header class="bg-blur-dark header-config">
       <div class="text-content">
-        <h1>
+        <h1 style="font-size: 1.7rem;">
           Nosso compromisso é prestar serviços de <mark>excelência</mark> para garantir a satisfação de nossos clientes e melhoria de seus negócios.
         </h1>
       </div>
@@ -19,11 +19,16 @@ import Testimonial from "@components/Testimonial.astro";
   <!-- Corpo -->
   <section class="container p-5">
     <article class="row align-items-center justify-content-around js">
-      <img
-        src="/icons/about-us.svg"
-        class="order-sm-1 img-fluid col-lg-6 col-md-8 col-sm-12 mb-5 js-scroll"
-        alt=""
-      />
+      <div class="order-sm-1 col-lg-5 col-md-7 col-sm-12 mb-5 js-scroll d-flex justify-content-center">
+        <div style="border-radius: 1.5rem; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 4px solid #fff;">
+          <img
+        src="/images/boss.jpg"
+        class="img-fluid"
+        alt="Foto do fundador da IBW"
+        style="max-width: 320px; aspect-ratio: 1/1.4; object-fit: cover; height: 448px;"
+          />
+        </div>
+      </div>
 
       <div class="order-sm-2 col-lg-4 col-sm-12 js-scroll">
         <h1 class="text-ibw">Um pouco sobre a IBW</h1>
